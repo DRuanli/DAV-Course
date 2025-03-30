@@ -46,6 +46,15 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     processed_df.loc[processed_df['chol'] == 0, 'chol'] = np.nan
     processed_df.loc[processed_df['trestbps'] == 0, 'trestbps'] = np.nan
 
+    # Convert all relevant columns to numeric before calculating statistics
+    # Add this section:
+    for col in processed_df.columns:
+        if col != 'source':  # Skip non-numeric columns
+            try:
+                processed_df[col] = pd.to_numeric(processed_df[col], errors='coerce')
+            except:
+                pass  # Skip columns that can't be converted to numeric
+
     # Calculate missing percentage for each column
     missing_pct = (processed_df.isnull().sum() / len(processed_df) * 100).round(2)
     print(f"Missing percentages before imputation:\n{missing_pct[missing_pct > 0]}")
