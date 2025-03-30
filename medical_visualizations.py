@@ -544,7 +544,7 @@ def create_violin_plots(df: pd.DataFrame, output_dir: str) -> Dict[str, str]:
         cp_types = plot_df['Chest Pain Type'].unique()
 
         # Add annotations for each chest pain type
-        for i, cp in enumerate(sorted(cp_types)):
+        for i, cp in enumerate(sorted(cp_types, key=lambda x: float(x) if isinstance(x, (int, float, str)) and str(x).replace('.', '', 1).isdigit() else float('inf'))):
             # Get data for this chest pain type
             cp_data = plot_df[plot_df['Chest Pain Type'] == cp]
             no_disease = cp_data[cp_data['Disease Status'] == 'No Disease']['thalach']
