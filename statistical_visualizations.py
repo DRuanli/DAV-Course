@@ -292,6 +292,7 @@ def create_distribution_analysis_visualizations(df: pd.DataFrame,
     """
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
+    from scipy import stats
 
     output_files = {}
 
