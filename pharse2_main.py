@@ -100,7 +100,7 @@ def save_results(results, filename, directory='results'):
     file_path = os.path.join(directory, filename)
 
     class NumpyEncoder(json.JSONEncoder):
-        """Custom JSON encoder for NumPy types."""
+        """Custom JSON encoder for NumPy types and Pandas DataFrames."""
 
         def default(self, obj):
             if isinstance(obj, (np.integer, np.floating, np.bool_)):
@@ -109,6 +109,10 @@ def save_results(results, filename, directory='results'):
                 return obj.tolist()
             elif pd.isna(obj):
                 return None
+            elif isinstance(obj, pd.DataFrame):
+                return obj.to_dict(orient='records')
+            elif isinstance(obj, pd.Series):
+                return obj.to_dict()
             return super(NumpyEncoder, self).default(obj)
 
     try:
@@ -117,6 +121,26 @@ def save_results(results, filename, directory='results'):
         logging.info(f"Results saved to {file_path}")
     except Exception as e:
         logging.error(f"Error saving results to {file_path}: {e}")
+
+
+def create_binary_target(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Create binary target variable from the multi-class 'num' variable.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame with the original 'num' column
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with additional binary target column
+    """
+    df_copy = df.copy()
+    # Create binary target: 0 = no disease, 1 = disease (original values 1-4)
+    df_copy['target_binary'] = df_copy['num'].apply(lambda x: 0 if x == 0 else 1)
+    return df_copy
 
 
 def main():
@@ -138,6 +162,9 @@ def main():
         # Step 2: Preprocess the data
         logging.info("Step 2: Preprocessing the data")
         processed_data = preprocess_heart_disease_data(raw_data)
+
+        # Create binary target variable
+        processed_data = create_binary_target(processed_data)
 
         # Document preprocessing decisions
         preprocessing_doc = document_preprocessing_decisions(raw_data, processed_data)
