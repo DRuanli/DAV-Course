@@ -1,0 +1,545 @@
+{
+    "continuous_variable_tests": {
+        "age_disease_difference": {
+            "null_hypothesis": "There is no difference in the mean age between the two groups of target_binary",
+            "alternative_hypothesis": "There is a difference in the mean age between the two groups of target_binary",
+            "sample_sizes": {
+                "0": 411,
+                "1": 509
+            },
+            "means": {
+                "0": 50.54744525547445,
+                "1": 55.90373280943025
+            },
+            "std_devs": {
+                "0": 9.433699946302818,
+                "1": 8.718958764910905
+            },
+            "normality_tests": {
+                "0": {
+                    "shapiro_p_value": 0.05275654438096858,
+                    "normal": true
+                },
+                "1": {
+                    "shapiro_p_value": 4.260286639297379e-05,
+                    "normal": false
+                }
+            },
+            "test_used": "Mann-Whitney U test (non-parametric)",
+            "statistic": 69330.0,
+            "p_value": 1.288873276620284e-18,
+            "significant": true,
+            "medians": {
+                "0": 51.0,
+                "1": 57.0
+            },
+            "iqrs": {
+                "0": 14.0,
+                "1": 11.0
+            },
+            "median_difference": -6.0,
+            "effect_size": {
+                "method": "Cohen's d",
+                "value": 0.5921716295813191,
+                "interpretation": "Medium"
+            },
+            "conclusion": "The mean age is significantly lower in the non-disease group compared to the disease group (p=0.0000)",
+            "visualization": "results/phase3/figures/age_group_comparison.png"
+        },
+        "chol_disease_difference": {
+            "null_hypothesis": "There is no difference in the mean chol between the two groups of target_binary",
+            "alternative_hypothesis": "There is a difference in the mean chol between the two groups of target_binary",
+            "sample_sizes": {
+                "0": 411,
+                "1": 509
+            },
+            "means": {
+                "0": 234.83211678832117,
+                "1": 237.39882121807466
+            },
+            "std_devs": {
+                "0": 50.558753941750034,
+                "1": 52.316618971938375
+            },
+            "normality_tests": {
+                "0": {
+                    "shapiro_p_value": 6.963179835451096e-05,
+                    "normal": false
+                },
+                "1": {
+                    "shapiro_p_value": 9.85640282519301e-13,
+                    "normal": false
+                }
+            },
+            "test_used": "Mann-Whitney U test (non-parametric)",
+            "statistic": 98544.5,
+            "p_value": 0.12973280106833693,
+            "significant": false,
+            "medians": {
+                "0": 234.0,
+                "1": 234.0
+            },
+            "iqrs": {
+                "0": 62.0,
+                "1": 51.0
+            },
+            "median_difference": 0.0,
+            "effect_size": {
+                "method": "Cohen's d",
+                "value": 0.04980127939115375,
+                "interpretation": "Small"
+            },
+            "conclusion": "There is no significant difference in chol between the two groups (p=0.1297)",
+            "visualization": "results/phase3/figures/chol_group_comparison.png"
+        },
+        "thalach_disease_difference": {
+            "null_hypothesis": "There is no difference in the mean thalach between the two groups of target_binary",
+            "alternative_hypothesis": "There is a difference in the mean thalach between the two groups of target_binary",
+            "sample_sizes": {
+                "0": 411,
+                "1": 509
+            },
+            "means": {
+                "0": 148.37226277372264,
+                "1": 129.08644400785855
+            },
+            "std_devs": {
+                "0": 23.10358666040154,
+                "1": 23.32195902076514
+            },
+            "normality_tests": {
+                "0": {
+                    "shapiro_p_value": 2.6586402924675296e-05,
+                    "normal": false
+                },
+                "1": {
+                    "shapiro_p_value": 0.050669943601688305,
+                    "normal": true
+                }
+            },
+            "test_used": "Mann-Whitney U test (non-parametric)",
+            "statistic": 151378.0,
+            "p_value": 1.5651001692076925e-31,
+            "significant": true,
+            "medians": {
+                "0": 150.0,
+                "1": 130.0
+            },
+            "iqrs": {
+                "0": 29.5,
+                "1": 31.0
+            },
+            "median_difference": 20.0,
+            "effect_size": {
+                "method": "Cohen's d",
+                "value": 0.830401822248986,
+                "interpretation": "Large"
+            },
+            "conclusion": "The mean thalach is significantly higher in the non-disease group compared to the disease group (p=0.0000)",
+            "visualization": "results/phase3/figures/thalach_group_comparison.png"
+        },
+        "oldpeak_disease_difference": {
+            "null_hypothesis": "There is no difference in the mean oldpeak between the two groups of target_binary",
+            "alternative_hypothesis": "There is a difference in the mean oldpeak between the two groups of target_binary",
+            "sample_sizes": {
+                "0": 411,
+                "1": 509
+            },
+            "means": {
+                "0": 0.4212895377128954,
+                "1": 1.1847740667976423
+            },
+            "std_devs": {
+                "0": 0.6916861979620883,
+                "1": 1.1157246674244383
+            },
+            "normality_tests": {
+                "0": {
+                    "shapiro_p_value": 2.636585086534531e-26,
+                    "normal": false
+                },
+                "1": {
+                    "shapiro_p_value": 1.3099045909316874e-13,
+                    "normal": false
+                }
+            },
+            "test_used": "Mann-Whitney U test (non-parametric)",
+            "statistic": 58979.0,
+            "p_value": 4.484640774173373e-32,
+            "significant": true,
+            "medians": {
+                "0": 0.0,
+                "1": 1.0
+            },
+            "iqrs": {
+                "0": 0.6,
+                "1": 2.0
+            },
+            "median_difference": -1.0,
+            "effect_size": {
+                "method": "Cohen's d",
+                "value": 0.8036481783497947,
+                "interpretation": "Large"
+            },
+            "conclusion": "The mean oldpeak is significantly lower in the non-disease group compared to the disease group (p=0.0000)",
+            "visualization": "results/phase3/figures/oldpeak_group_comparison.png"
+        },
+        "trestbps_disease_difference": {
+            "null_hypothesis": "There is no difference in the mean trestbps between the two groups of target_binary",
+            "alternative_hypothesis": "There is a difference in the mean trestbps between the two groups of target_binary",
+            "sample_sizes": {
+                "0": 411,
+                "1": 509
+            },
+            "means": {
+                "0": 129.72262773722628,
+                "1": 133.3418467583497
+            },
+            "std_devs": {
+                "0": 15.756870709045314,
+                "1": 17.65719715989488
+            },
+            "normality_tests": {
+                "0": {
+                    "shapiro_p_value": 8.76412349042951e-08,
+                    "normal": false
+                },
+                "1": {
+                    "shapiro_p_value": 6.985426332589812e-08,
+                    "normal": false
+                }
+            },
+            "test_used": "Mann-Whitney U test (non-parametric)",
+            "statistic": 92111.5,
+            "p_value": 0.0017183940582242779,
+            "significant": true,
+            "medians": {
+                "0": 130.0,
+                "1": 130.0
+            },
+            "iqrs": {
+                "0": 20.0,
+                "1": 25.0
+            },
+            "median_difference": 0.0,
+            "effect_size": {
+                "method": "Cohen's d",
+                "value": 0.21498187206895886,
+                "interpretation": "Small"
+            },
+            "conclusion": "The mean trestbps is significantly lower in the non-disease group compared to the disease group (p=0.0017)",
+            "visualization": "results/phase3/figures/trestbps_group_comparison.png"
+        }
+    },
+    "categorical_association_tests": {
+        "sex_disease_association": {
+            "null_hypothesis": "There is no association between sex and target_binary",
+            "alternative_hypothesis": "There is an association between sex and target_binary",
+            "contingency_table": {
+                "0": {
+                    "0.0": 144,
+                    "1.0": 267
+                },
+                "1": {
+                    "0.0": 50,
+                    "1.0": 459
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 85.3612388986764,
+            "p_value": 2.4854527862011707e-20,
+            "degrees_of_freedom": 1,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.3046045884825904,
+                "interpretation": "Medium"
+            },
+            "percentage_table": {
+                "0": {
+                    "0.0": 74.22680412371135,
+                    "1.0": 36.77685950413223
+                },
+                "1": {
+                    "0.0": 25.773195876288657,
+                    "1.0": 63.22314049586777
+                }
+            },
+            "conclusion": "There is a significant association between sex and heart disease status (p=0.0000) with a medium effect size",
+            "visualization": "results/phase3/figures/gender_disease_status_association.png"
+        },
+        "cp_disease_association": {
+            "null_hypothesis": "There is no association between cp and target_binary",
+            "alternative_hypothesis": "There is an association between cp and target_binary",
+            "contingency_table": {
+                "0": {
+                    "1.5": 26,
+                    "2.0": 150,
+                    "3.0": 131,
+                    "4.0": 104
+                },
+                "1": {
+                    "1.5": 20,
+                    "2.0": 24,
+                    "3.0": 73,
+                    "4.0": 392
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 268.3457473383063,
+            "p_value": 7.036524877817213e-58,
+            "degrees_of_freedom": 3,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.5400742172612325,
+                "interpretation": "Large"
+            },
+            "percentage_table": {
+                "0": {
+                    "1.5": 56.52173913043478,
+                    "2.0": 86.20689655172413,
+                    "3.0": 64.2156862745098,
+                    "4.0": 20.967741935483872
+                },
+                "1": {
+                    "1.5": 43.47826086956522,
+                    "2.0": 13.793103448275861,
+                    "3.0": 35.78431372549019,
+                    "4.0": 79.03225806451613
+                }
+            },
+            "conclusion": "There is a significant association between cp and heart disease status (p=0.0000) with a large effect size",
+            "visualization": "results/phase3/figures/cp_disease_status_association.png"
+        },
+        "fbs_disease_association": {
+            "null_hypothesis": "There is no association between fbs and target_binary",
+            "alternative_hypothesis": "There is an association between fbs and target_binary",
+            "contingency_table": {
+                "0": {
+                    "0.0": 367,
+                    "1.0": 44
+                },
+                "1": {
+                    "0.0": 415,
+                    "1.0": 94
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 10.144865349616916,
+            "p_value": 0.0014470373337260197,
+            "degrees_of_freedom": 1,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.10500965457486007,
+                "interpretation": "Small"
+            },
+            "percentage_table": {
+                "0": {
+                    "0.0": 46.930946291560105,
+                    "1.0": 31.88405797101449
+                },
+                "1": {
+                    "0.0": 53.069053708439895,
+                    "1.0": 68.11594202898551
+                }
+            },
+            "conclusion": "There is a significant association between fbs and heart disease status (p=0.0014)",
+            "visualization": "results/phase3/figures/fbs_disease_status_association.png"
+        },
+        "restecg_disease_association": {
+            "null_hypothesis": "There is no association between restecg and target_binary",
+            "alternative_hypothesis": "There is an association between restecg and target_binary",
+            "contingency_table": {
+                "0": {
+                    "0.0": 268,
+                    "1.0": 61,
+                    "2.0": 82
+                },
+                "1": {
+                    "0.0": 285,
+                    "1.0": 118,
+                    "2.0": 106
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 11.427811333815146,
+            "p_value": 0.0032997595826451034,
+            "degrees_of_freedom": 2,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.11145193609127983,
+                "interpretation": "Small"
+            },
+            "percentage_table": {
+                "0": {
+                    "0.0": 48.4629294755877,
+                    "1.0": 34.07821229050279,
+                    "2.0": 43.61702127659575
+                },
+                "1": {
+                    "0.0": 51.5370705244123,
+                    "1.0": 65.92178770949721,
+                    "2.0": 56.38297872340425
+                }
+            },
+            "conclusion": "There is a significant association between restecg and heart disease status (p=0.0033)",
+            "visualization": "results/phase3/figures/restecg_disease_status_association.png"
+        },
+        "exang_disease_association": {
+            "null_hypothesis": "There is no association between exang and target_binary",
+            "alternative_hypothesis": "There is an association between exang and target_binary",
+            "contingency_table": {
+                "0": {
+                    "0.0": 356,
+                    "1.0": 55
+                },
+                "1": {
+                    "0.0": 227,
+                    "1.0": 282
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 171.16682596726758,
+            "p_value": 4.114575498568801e-39,
+            "degrees_of_freedom": 1,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.43133617723361467,
+                "interpretation": "Medium"
+            },
+            "percentage_table": {
+                "0": {
+                    "0.0": 61.06346483704974,
+                    "1.0": 16.320474777448073
+                },
+                "1": {
+                    "0.0": 38.93653516295026,
+                    "1.0": 83.67952522255193
+                }
+            },
+            "conclusion": "There is a significant association between exang and heart disease status (p=0.0000) with a medium effect size",
+            "visualization": "results/phase3/figures/exang_disease_status_association.png"
+        },
+        "slope_disease_association": {
+            "null_hypothesis": "There is no association between slope and target_binary",
+            "alternative_hypothesis": "There is an association between slope and target_binary",
+            "contingency_table": {
+                "0": {
+                    "2.0": 411
+                },
+                "1": {
+                    "2.0": 509
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "degrees_of_freedom": 0,
+            "significant": false,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0,
+                "interpretation": "Small"
+            },
+            "percentage_table": {
+                "0": {
+                    "2.0": 44.67391304347826
+                },
+                "1": {
+                    "2.0": 55.326086956521735
+                }
+            },
+            "conclusion": "There is no significant association between slope and target_binary (p=1.0000)",
+            "visualization": "results/phase3/figures/slope_disease_status_association.png"
+        },
+        "ca_disease_association": {
+            "null_hypothesis": "There is no association between ca and target_binary",
+            "alternative_hypothesis": "There is an association between ca and target_binary",
+            "contingency_table": {
+                "0": {
+                    "0.0": 133,
+                    "1.0": 21,
+                    "2.0": 8,
+                    "3.0": 3
+                },
+                "1": {
+                    "0.0": 48,
+                    "1.0": 46,
+                    "2.0": 33,
+                    "3.0": 17
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 73.20029491660873,
+            "p_value": 8.805830188183042e-16,
+            "degrees_of_freedom": 3,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.4867177398720711,
+                "interpretation": "Medium"
+            },
+            "percentage_table": {
+                "0": {
+                    "0.0": 73.48066298342542,
+                    "1.0": 31.343283582089555,
+                    "2.0": 19.51219512195122,
+                    "3.0": 15.0
+                },
+                "1": {
+                    "0.0": 26.519337016574585,
+                    "1.0": 68.65671641791045,
+                    "2.0": 80.48780487804879,
+                    "3.0": 85.0
+                }
+            },
+            "conclusion": "There is a significant association between ca and heart disease status (p=0.0000) with a medium effect size",
+            "visualization": "results/phase3/figures/ca_disease_status_association.png"
+        },
+        "thal_disease_association": {
+            "null_hypothesis": "There is no association between thal and target_binary",
+            "alternative_hypothesis": "There is an association between thal and target_binary",
+            "contingency_table": {
+                "0": {
+                    "3.0": 138,
+                    "6.0": 11,
+                    "7.0": 38
+                },
+                "1": {
+                    "3.0": 58,
+                    "6.0": 35,
+                    "7.0": 154
+                }
+            },
+            "test_used": "Pearson's Chi-square test",
+            "statistic": 109.04739780567616,
+            "p_value": 2.092466113570906e-24,
+            "degrees_of_freedom": 2,
+            "significant": true,
+            "effect_size": {
+                "method": "Cramer's V",
+                "value": 0.5012596984264094,
+                "interpretation": "Large"
+            },
+            "percentage_table": {
+                "0": {
+                    "3.0": 70.40816326530613,
+                    "6.0": 23.91304347826087,
+                    "7.0": 19.791666666666664
+                },
+                "1": {
+                    "3.0": 29.591836734693878,
+                    "6.0": 76.08695652173914,
+                    "7.0": 80.20833333333334
+                }
+            },
+            "conclusion": "There is a significant association between thal and heart disease status (p=0.0000) with a large effect size",
+            "visualization": "results/phase3/figures/thal_disease_status_association.png"
+        }
+    },
+    "timestamp": "2025-03-30 15:55:41"
+}

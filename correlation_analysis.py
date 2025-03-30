@@ -764,9 +764,22 @@ def create_correlation_barplot(df: pd.DataFrame,
     correlations = []
     for col in numeric_cols:
         if corr_type == 'pearson':
-            corr, p = stats.pearsonr(df[col].dropna(), df[target_var].dropna())
+            # Get indices of rows that have valid values in both columns
+            valid_idx = df[[col, target_var]].dropna().index
+            # Calculate correlation using only these rows
+            if len(valid_idx) > 1:  # Need at least 2 points for correlation
+                corr, p = stats.pearsonr(df.loc[valid_idx, col], df.loc[valid_idx, target_var])
+            else:
+                # Skip this column if not enough valid data points
+                continue
         else:  # spearman
-            corr, p = stats.spearmanr(df[col].dropna(), df[target_var].dropna())
+            valid_idx = df[[col, target_var]].dropna().index
+            # Calculate correlation using only these rows
+            if len(valid_idx) > 1:  # Need at least 2 points for correlation
+                corr, p = stats.spearmanr(df.loc[valid_idx, col], df.loc[valid_idx, target_var])
+            else:
+                # Skip this column if not enough valid data points
+                continue
 
         correlations.append({
             'variable': col,

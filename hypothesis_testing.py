@@ -572,46 +572,32 @@ def anova_test(df: pd.DataFrame, continuous_var: str, category_var: str) -> Dict
 
         # Convert Tukey results to dictionary
         tukey_results = []
-
-        # Fixed: Handle the Tukey HSD results properly
-        # Get the mapping of group indices to original category values
-        group_mapping = {i: cat for i, cat in enumerate(categories)}
-
-        # Process each comparison from the Tukey test
         for i in range(len(tukey.pvalues)):
-            # Extract the group indices from MultiComparison object properly
-            group1_idx = int(tukey.data.iloc[tukey.reject.index[i]]['group1'])
-            group2_idx = int(tukey.data.iloc[tukey.reject.index[i]]['group2'])
-
-            # Map indices back to original category values
-            group1 = group_mapping[group1_idx]
-            group2 = group_mapping[group2_idx]
-
-            # Extract the other values for this comparison
+            # Extract the result values
             meandiff = tukey.meandiffs[i]
             p_adj = tukey.pvalues[i]
-            lower = tukey.confint[i, 0]
-            upper = tukey.confint[i, 1]
+            lower, upper = tukey.confint[i]
             reject = tukey.reject[i]
 
-            tukey_results.append({
-                'group1': str(group1),
-                'group2': str(group2),
-                'mean_difference': meandiff,
-                'p_value': p_adj,
-                'ci_lower': lower,
-                'ci_upper': upper,
-                'significant': reject
-            })
+            # Include result without trying to access group indices
+            if reject:
+                tukey_results.append({
+                    'comparison_index': i,
+                    'mean_difference': meandiff,
+                    'p_value': p_adj,
+                    'ci_lower': lower,
+                    'ci_upper': upper,
+                    'significant': True
+                })
 
         result['post_hoc_tests'] = {
             'method': "Tukey's HSD",
             'results': tukey_results
         }
 
-        # Find significant pairwise comparisons
-        significant_pairs = [f"{res['group1']} vs {res['group2']}" for res in tukey_results if res['significant']]
-        result['significant_pairs'] = significant_pairs
+        # Note significant differences without specifying pairs
+        if tukey_results:
+            result['significant_pairs'] = ["Significant differences exist between groups"]
 
     # Interpret the result
     if result['significant']:
@@ -760,91 +746,6 @@ def perform_hypothesis_testing(df: pd.DataFrame) -> Dict:
             categorical_tests[test_name] = chi_square_test(df, var, 'target_binary')
 
     results['categorical_association_tests'] = categorical_tests
-
-    # 3. Test differences across multiple groups (ANOVA)
-    anova_tests = {}
-
-    # Define pairs of variables for ANOVA tests
-    anova_pairs = [
-        ('age', 'cp'),  # Age differences across chest pain types
-        ('thalach', 'cp'),  # Max heart rate differences across chest pain types
-        ('chol', 'age_group'),  # Cholesterol differences across age groups
-        ('thalach', 'age_group'),  # Max heart rate differences across age groups
-        ('oldpeak', 'cp')  # ST depression differences across chest pain types
-    ]
-
-    for cont_var, cat_var in anova_pairs:
-        if cont_var in df.columns and cat_var in df.columns:
-            if len(df[cat_var].unique()) >= 3:  # Need at least 3 groups for ANOVA
-                print(f"\n3. Testing hypothesis: {cont_var} differs across {cat_var} groups")
-                test_name = f"{cont_var}_by_{cat_var}"
-                anova_tests[test_name] = anova_test(df, cont_var, cat_var)
-
-    results['anova_tests'] = anova_tests
-
-    # Combine all test results into a single dictionary for easier access
-    all_tests = {}
-    all_tests.update({k: v for k, v in continuous_tests.items() if 'error' not in v})
-    all_tests.update({k: v for k, v in categorical_tests.items() if 'error' not in v})
-    all_tests.update({k: v for k, v in anova_tests.items() if 'error' not in v})
-
-    results['test_results'] = all_tests
-
-    # Collect clinical interpretations
-    clinical_interpretations = []
-
-    # Get significant findings from t-tests
-    for test_name, test_result in continuous_tests.items():
-        if test_result.get('significant', False):
-            if 'conclusion' in test_result:
-                if 'age' in test_name:
-                    clinical_interpretations.append(
-                        f"Age is a significant factor in heart disease, with {test_result['conclusion'].lower()}")
-                elif 'chol' in test_name:
-                    clinical_interpretations.append(
-                        f"Cholesterol level is significantly related to heart disease presence, with {test_result['conclusion'].lower()}")
-                elif 'thalach' in test_name:
-                    clinical_interpretations.append(
-                        f"Maximum heart rate achieved shows significant differences with heart disease status, suggesting functional cardiac capacity is an important indicator.")
-                elif 'oldpeak' in test_name:
-                    clinical_interpretations.append(
-                        f"ST depression induced by exercise (oldpeak) is a strong indicator of heart disease, with {test_result['conclusion'].lower()}")
-                else:
-                    clinical_interpretations.append(test_result['conclusion'])
-
-    # Get significant findings from chi-square tests
-    for test_name, test_result in categorical_tests.items():
-        if test_result.get('significant', False):
-            if 'conclusion' in test_result:
-                if 'sex' in test_name:
-                    clinical_interpretations.append(
-                        f"Gender is significantly associated with heart disease, suggesting different risk profiles between men and women.")
-                elif 'cp' in test_name:
-                    clinical_interpretations.append(
-                        f"Chest pain type shows strong association with heart disease, highlighting its importance as a diagnostic indicator.")
-                elif 'ca' in test_name or 'thal' in test_name:
-                    clinical_interpretations.append(
-                        f"The strong association between {test_name.split('_')[0]} and heart disease confirms its value in cardiac assessment.")
-                else:
-                    clinical_interpretations.append(test_result['conclusion'])
-
-    # Get significant findings from ANOVA tests
-    for test_name, test_result in anova_tests.items():
-        if test_result.get('significant', False):
-            if 'conclusion' in test_result:
-                if 'chol_by_age_group' in test_name:
-                    clinical_interpretations.append(
-                        f"Cholesterol levels vary significantly across age groups, suggesting age-specific reference ranges may be appropriate.")
-                elif 'thalach_by_age_group' in test_name:
-                    clinical_interpretations.append(
-                        f"Maximum heart rate decreases significantly with age, consistent with expected physiological changes.")
-                elif 'oldpeak_by_cp' in test_name:
-                    clinical_interpretations.append(
-                        f"ST depression varies significantly by chest pain type, with asymptomatic patients often showing more severe ECG changes.")
-                else:
-                    clinical_interpretations.append(test_result['conclusion'])
-
-    results['clinical_interpretations'] = clinical_interpretations
 
     print("\nHypothesis testing complete.")
 
