@@ -1,0 +1,409 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Heart Disease Dataset Analysis</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 0;
+                color: #333;
+            }
+            h1, h2, h3 {
+                color: #0066cc;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .summary {
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heart Disease Dataset Analysis Report</h1>
+        <p>Generated on: 2025-03-30 14:52:20</p>
+
+        <div class="summary">
+            <h2>Dataset Summary</h2>
+            <p>Total samples: 920</p>
+            <p>Dataset sources: cleveland, hungarian, switzerland, va</p>
+            <p>Variables: age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, num, source, target_binary</p>
+        </div>
+
+        <h2>Dataset Description</h2>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Missing Values</th>
+            </tr>
+    
+            <tr>
+                <td>age</td>
+                <td>Age of the patient in years</td>
+                <td>float64</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+            <tr>
+                <td>sex</td>
+                <td>Gender of the patient (1 = male, 0 = female)</td>
+                <td>float64</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+            <tr>
+                <td>cp</td>
+                <td>Chest pain type (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, 4 = asymptomatic)</td>
+                <td>float64</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+            <tr>
+                <td>trestbps</td>
+                <td>Resting blood pressure in mm Hg on admission to the hospital</td>
+                <td>float64</td>
+                <td>60 (6.52%)</td>
+            </tr>
+        
+            <tr>
+                <td>chol</td>
+                <td>Serum cholesterol in mg/dl</td>
+                <td>float64</td>
+                <td>202 (21.96%)</td>
+            </tr>
+        
+            <tr>
+                <td>fbs</td>
+                <td>Fasting blood sugar > 120 mg/dl (1 = true, 0 = false)</td>
+                <td>float64</td>
+                <td>90 (9.78%)</td>
+            </tr>
+        
+            <tr>
+                <td>restecg</td>
+                <td>Resting electrocardiographic results (0 = normal, 1 = having ST-T wave abnormality, 2 = showing probable or definite left ventricular hypertrophy)</td>
+                <td>float64</td>
+                <td>2 (0.22%)</td>
+            </tr>
+        
+            <tr>
+                <td>thalach</td>
+                <td>Maximum heart rate achieved</td>
+                <td>float64</td>
+                <td>55 (5.98%)</td>
+            </tr>
+        
+            <tr>
+                <td>exang</td>
+                <td>Exercise induced angina (1 = yes, 0 = no)</td>
+                <td>float64</td>
+                <td>55 (5.98%)</td>
+            </tr>
+        
+            <tr>
+                <td>oldpeak</td>
+                <td>ST depression induced by exercise relative to rest</td>
+                <td>float64</td>
+                <td>62 (6.74%)</td>
+            </tr>
+        
+            <tr>
+                <td>slope</td>
+                <td>Slope of the peak exercise ST segment (1 = upsloping, 2 = flat, 3 = downsloping)</td>
+                <td>float64</td>
+                <td>309 (33.59%)</td>
+            </tr>
+        
+            <tr>
+                <td>ca</td>
+                <td>Number of major vessels (0-3) colored by fluoroscopy</td>
+                <td>float64</td>
+                <td>611 (66.41%)</td>
+            </tr>
+        
+            <tr>
+                <td>thal</td>
+                <td>Thalassemia (3 = normal, 6 = fixed defect, 7 = reversible defect)</td>
+                <td>float64</td>
+                <td>486 (52.83%)</td>
+            </tr>
+        
+            <tr>
+                <td>num</td>
+                <td>Diagnosis of heart disease (0 = absence, 1-4 = presence with higher values indicating more severe condition)</td>
+                <td>int64</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+            <tr>
+                <td>source</td>
+                <td>Source of the data (cleveland, hungarian, switzerland, va)</td>
+                <td>object</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+            <tr>
+                <td>target_binary</td>
+                <td>Binary target variable (0 = no disease, 1 = disease)</td>
+                <td>int64</td>
+                <td>0 (0.00%)</td>
+            </tr>
+        
+        </table>
+
+        <h2>Analysis Results</h2>
+    
+        <h3>Basic Statistics</h3>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Std</th>
+                <th>Min</th>
+                <th>Max</th>
+            </tr>
+        
+            <tr>
+                <td>age</td>
+                <td>53.51</td>
+                <td>54.00</td>
+                <td>9.42</td>
+                <td>28.00</td>
+                <td>77.00</td>
+            </tr>
+            
+            <tr>
+                <td>trestbps</td>
+                <td>132.29</td>
+                <td>130.00</td>
+                <td>18.54</td>
+                <td>80.00</td>
+                <td>200.00</td>
+            </tr>
+            
+            <tr>
+                <td>chol</td>
+                <td>246.83</td>
+                <td>239.50</td>
+                <td>58.53</td>
+                <td>85.00</td>
+                <td>603.00</td>
+            </tr>
+            
+            <tr>
+                <td>thalach</td>
+                <td>137.55</td>
+                <td>140.00</td>
+                <td>25.93</td>
+                <td>60.00</td>
+                <td>202.00</td>
+            </tr>
+            
+            <tr>
+                <td>oldpeak</td>
+                <td>0.88</td>
+                <td>0.50</td>
+                <td>1.09</td>
+                <td>-2.60</td>
+                <td>6.20</td>
+            </tr>
+            
+            <tr>
+                <td>cp</td>
+                <td>3.25</td>
+                <td>4.00</td>
+                <td>0.93</td>
+                <td>1.00</td>
+                <td>4.00</td>
+            </tr>
+            
+            <tr>
+                <td>restecg</td>
+                <td>0.60</td>
+                <td>0.00</td>
+                <td>0.81</td>
+                <td>0.00</td>
+                <td>2.00</td>
+            </tr>
+            
+            <tr>
+                <td>slope</td>
+                <td>1.77</td>
+                <td>2.00</td>
+                <td>0.62</td>
+                <td>1.00</td>
+                <td>3.00</td>
+            </tr>
+            
+            <tr>
+                <td>ca</td>
+                <td>0.68</td>
+                <td>0.00</td>
+                <td>0.94</td>
+                <td>0.00</td>
+                <td>3.00</td>
+            </tr>
+            
+            <tr>
+                <td>thal</td>
+                <td>5.09</td>
+                <td>6.00</td>
+                <td>1.92</td>
+                <td>3.00</td>
+                <td>7.00</td>
+            </tr>
+            
+            <tr>
+                <td>num</td>
+                <td>1.00</td>
+                <td>1.00</td>
+                <td>1.14</td>
+                <td>0.00</td>
+                <td>4.00</td>
+            </tr>
+            
+            <tr>
+                <td>sex</td>
+                <td>0.79</td>
+                <td>1.00</td>
+                <td>0.41</td>
+                <td>0.00</td>
+                <td>1.00</td>
+            </tr>
+            
+            <tr>
+                <td>fbs</td>
+                <td>0.17</td>
+                <td>0.00</td>
+                <td>0.37</td>
+                <td>0.00</td>
+                <td>1.00</td>
+            </tr>
+            
+            <tr>
+                <td>exang</td>
+                <td>0.39</td>
+                <td>0.00</td>
+                <td>0.49</td>
+                <td>0.00</td>
+                <td>1.00</td>
+            </tr>
+            
+            <tr>
+                <td>target_binary</td>
+                <td>0.55</td>
+                <td>1.00</td>
+                <td>0.50</td>
+                <td>0.00</td>
+                <td>1.00</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Target Distribution</h3>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Count</th>
+                <th>Percentage</th>
+            </tr>
+        
+            <tr>
+                <td>0</td>
+                <td>411</td>
+                <td>44.67%</td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>265</td>
+                <td>28.80%</td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>109</td>
+                <td>11.85%</td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>107</td>
+                <td>11.63%</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>28</td>
+                <td>3.04%</td>
+            </tr>
+            
+        </table>
+        
+            <h2>Visualizations</h2>
+            
+                <h3>thalach distribution</h3>
+                <img src="figures/thalach_distribution.png" alt="thalach_distribution.png">
+                
+                <h3>chol by cp boxplot</h3>
+                <img src="figures/chol_by_cp_boxplot.png" alt="chol_by_cp_boxplot.png">
+                
+                <h3>age vs thalach scatter</h3>
+                <img src="figures/age_vs_thalach_scatter.png" alt="age_vs_thalach_scatter.png">
+                
+                <h3>chol distribution</h3>
+                <img src="figures/chol_distribution.png" alt="chol_distribution.png">
+                
+                <h3>age distribution</h3>
+                <img src="figures/age_distribution.png" alt="age_distribution.png">
+                
+                <h3>sex countplot</h3>
+                <img src="figures/sex_countplot.png" alt="sex_countplot.png">
+                
+                <h3>pairplot age chol thalach oldpeak</h3>
+                <img src="figures/pairplot_age_chol_thalach_oldpeak.png" alt="pairplot_age_chol_thalach_oldpeak.png">
+                
+                <h3>trestbps distribution</h3>
+                <img src="figures/trestbps_distribution.png" alt="trestbps_distribution.png">
+                
+                <h3>cp countplot</h3>
+                <img src="figures/cp_countplot.png" alt="cp_countplot.png">
+                
+                <h3>oldpeak distribution</h3>
+                <img src="figures/oldpeak_distribution.png" alt="oldpeak_distribution.png">
+                
+                <h3>num countplot</h3>
+                <img src="figures/num_countplot.png" alt="num_countplot.png">
+                
+                <h3>pearson correlation heatmap</h3>
+                <img src="figures/pearson_correlation_heatmap.png" alt="pearson_correlation_heatmap.png">
+                
+                <h3>thalach by sex violin</h3>
+                <img src="figures/thalach_by_sex_violin.png" alt="thalach_by_sex_violin.png">
+                
+    </body>
+    </html>
+    

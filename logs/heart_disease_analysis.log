@@ -1,0 +1,33 @@
+2025-03-30 14:45:03,819 - root - INFO - Logging initialized
+2025-03-30 14:45:03,820 - root - INFO - Starting Heart Disease Dataset Analysis
+2025-03-30 14:45:03,820 - root - INFO - Directory structure created
+2025-03-30 14:45:03,820 - root - INFO - Project structure initialized
+2025-03-30 14:45:03,821 - root - INFO - Visualization environment set up
+2025-03-30 14:45:03,822 - root - ERROR - Error in main execution: 'age'
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/main.py", line 104, in main
+    run_analysis_pipeline()
+  File "/Applications/AI/Health/heart-disease-analysis-uci/main.py", line 54, in run_analysis_pipeline
+    df, summary = load_and_prepare_data()
+  File "/Applications/AI/Health/heart-disease-analysis-uci/src/data_manager.py", line 161, in load_and_prepare_data
+    processed_df = preprocess_data(combined_df)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/src/data_manager.py", line 105, in preprocess_data
+    processed_df[col] = pd.to_numeric(processed_df[col], errors='coerce')
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'age'
+2025-03-30 14:52:06,686 - root - INFO - Logging initialized
+2025-03-30 14:52:06,687 - root - INFO - Starting Heart Disease Dataset Analysis
+2025-03-30 14:52:06,687 - root - INFO - Directory structure created
+2025-03-30 14:52:06,687 - root - INFO - Project structure initialized
+2025-03-30 14:52:06,688 - root - INFO - Visualization environment set up
+2025-03-30 14:52:06,721 - root - INFO - Loaded dataset with 920 samples from 4 sources
+2025-03-30 14:52:06,782 - root - INFO - Results saved to results/analysis_results.json
+2025-03-30 14:52:06,782 - root - INFO - Initial analysis completed and saved
+2025-03-30 14:52:15,179 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 14:52:15,200 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 14:52:20,453 - root - INFO - Standard visualizations created
+2025-03-30 14:52:20,459 - root - INFO - HTML report generated at results/report.html
+2025-03-30 14:52:20,459 - root - INFO - HTML report generated
