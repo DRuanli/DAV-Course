@@ -1,0 +1,743 @@
+2025-03-30 15:10:56,471 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:10:56,471 - INFO - Step 1: Loading the raw data
+2025-03-30 15:10:56,472 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:10:56,478 - INFO - Added 303 records from cleveland
+2025-03-30 15:10:56,478 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:10:56,480 - INFO - Added 294 records from hungarian
+2025-03-30 15:10:56,481 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:10:56,482 - INFO - Added 123 records from switzerland
+2025-03-30 15:10:56,482 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:10:56,484 - INFO - Added 200 records from va
+2025-03-30 15:10:56,484 - INFO - Combined dataset has 920 records
+2025-03-30 15:10:56,484 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:10:56,491 - ERROR - Error in Phase 2 processing: Cannot convert [145.0 160.0 120.0 130.0 130.0 120.0 140.0 120.0 130.0 140.0 140.0 140.0
+ 130.0 120.0 172.0 150.0 110.0 140.0 130.0 130.0 110.0 150.0 120.0 132.0
+ 130.0 120.0 120.0 150.0 150.0 110.0 140.0 117.0 140.0 135.0 130.0 140.0
+ 120.0 150.0 132.0 150.0 150.0 140.0 160.0 150.0 130.0 112.0 110.0 150.0
+ 140.0 130.0 105.0 120.0 112.0 130.0 130.0 124.0 140.0 110.0 125.0 125.0
+ 130.0 142.0 128.0 135.0 120.0 145.0 140.0 150.0 170.0 150.0 155.0 125.0
+ 120.0 110.0 110.0 160.0 125.0 140.0 130.0 150.0 104.0 130.0 140.0 180.0
+ 120.0 140.0 138.0 128.0 138.0 130.0 120.0 160.0 130.0 108.0 135.0 128.0
+ 110.0 150.0 134.0 122.0 115.0 118.0 128.0 110.0 120.0 108.0 140.0 128.0
+ 120.0 118.0 145.0 125.0 118.0 132.0 130.0 135.0 140.0 138.0 130.0 135.0
+ 130.0 150.0 100.0 140.0 138.0 130.0 200.0 110.0 120.0 124.0 120.0 94.0
+ 130.0 140.0 122.0 135.0 145.0 120.0 120.0 125.0 140.0 170.0 128.0 125.0
+ 105.0 108.0 165.0 112.0 128.0 102.0 152.0 102.0 115.0 160.0 120.0 130.0
+ 140.0 125.0 140.0 118.0 101.0 125.0 110.0 100.0 124.0 132.0 138.0 132.0
+ 126.0 112.0 160.0 142.0 174.0 140.0 145.0 152.0 108.0 132.0 130.0 130.0
+ 124.0 134.0 148.0 178.0 158.0 140.0 120.0 160.0 192.0 140.0 129.0 140.0
+ 132.0 138.0 120.0 100.0 160.0 138.0 120.0 160.0 110.0 180.0 150.0 140.0
+ 110.0 142.0 128.0 144.0 130.0 150.0 120.0 120.0 130.0 178.0 112.0 120.0
+ 105.0 138.0 130.0 138.0 112.0 108.0 94.0 123.0 108.0 118.0 112.0 152.0
+ 110.0 112.0 136.0 180.0 118.0 120.0 160.0 122.0 130.0 120.0 134.0 120.0
+ 110.0 126.0 130.0 134.0 120.0 120.0 100.0 110.0 125.0 128.0 110.0 146.0
+ 128.0 120.0 115.0 120.0 106.0 140.0 156.0 124.0 118.0 136.0 150.0 120.0
+ 138.0 136.0 128.0 126.0 152.0 130.0 140.0 160.0 140.0 112.0 134.0 170.0
+ 146.0 138.0 154.0 130.0 110.0 130.0 128.0 122.0 148.0 114.0 170.0 125.0
+ 130.0 120.0 152.0 132.0 120.0 140.0 124.0 120.0 164.0 140.0 110.0 144.0
+ 130.0 130.0 138.0 '130' '120' '140' '170' '100' '105' '110' '125' '120'
+ '130' '150' '98' '120' '140' '120' '150' '120' '112' '130' '150' '120'
+ '130' '130' '130' '130' '120' '130' '120' '140' '145' '110' '120' '120'
+ '120' '130' '190' '120' '160' '110' '130' '130' '140' '130' '130' '140'
+ '110' '125' '130' '120' '120' '125' '112' '115' '120' '120' '150' '120'
+ '160' '140' '100' '120' '120' '120' '120' '150' '150' '142' '120' '120'
+ '130' '150' '130' '180' '132' '140' '135' '120' '140' '130' '140' '120'
+ '150' '110' '110' '180' '140' '130' '110' '160' '140' nan '120' '120'
+ '120' '108' '120' '150' '100' '130' '140' '110' '110' '110' '124' '130'
+ '100' '140' '120' '140' '110' '120' '120' '140' '170' '140' '150' '160'
+ '110' '130' '150' '125' '130' '130' '120' '140' '125' '130' '120' '140'
+ '160' '140' '113' '140' '120' '120' '140' '120' '124' '130' '140' '120'
+ '120' '120' '130' '140' '150' '160' '120' '110' '120' '120' '160' '160'
+ '120' '150' '150' '110' '122' '130' '120' '140' '145' '110' '120' '120'
+ '140' '130' '130' '130' '130' '120' '130' '180' '140' '130' '130' '140'
+ '135' '130' '140' '130' '180' '140' '120' '130' '125' '160' '140' '120'
+ '100' '140' '110' '120' '140' '110' '120' '92' '120' '110' '120' '150'
+ '110' '118' '120' '140' '150' '106' '120' '160' '160' '115' '130' '140'
+ '145' '160' '130' '125' '125' '140' '140' '130' '130' '100' '150' '140'
+ '118' '110' '110' '150' '120' '130' '120' '130' '122' '160' '160' '160'
+ '130' '120' '170' '120' '120' '130' '130' '140' '200' '140' '150' '150'
+ '160' '130' '130' '120' '150' '130' '140' '135' '138' '130' '140' '135'
+ '112' '130' '140' '160' '145' '180' '140' '140' '160' '145' '120' '150'
+ '170' '136' '130' '140' '170' '140' '120' '140' '135' '120' '160' '128'
+ '150' '140' '140' '140' '160' '130' '155' '180' '130' '95' '115' nan
+ '110' '105' '110' '100' '115' '135' '150' '95' '125' '105' '145' '100'
+ '115' '140' '110' '100' '115' '110' '155' '110' '160' '115' '160' '115'
+ '120' '145' '120' '110' '120' '130' '130' '140' '95' '130' '135' '165'
+ '95' '120' '130' '105' '160' '120' '125' '130' '80' '120' '130' '180'
+ '140' '115' '120' '140' '120' '125' '155' '115' '120' '120' '125' '140'
+ '105' '110' '140' '140' '160' '95' '115' '130' '170' '125' '110' '120'
+ '125' '135' '115' '125' '130' '135' '160' '160' '200' '105' '110' '125'
+ '130' '130' '150' '150' '160' '140' '120' '120' '160' '115' '115' '150'
+ '100' '140' '150' '150' '185' '200' '95' '110' '115' '145' '155' '160'
+ '155' '150' '145' '135' '145' '135' nan '115' '140' '160' '160' '145'
+ '140' '130' '132' '142' '110' '120' '150' '180' '120' '160' '126' '140'
+ '110' nan '128' '120' '170' '110' '126' '152' '116' '120' '130' nan '128'
+ '130' nan '130' '120' nan nan '124' '160' '0' '122' '144' nan '120' nan
+ '154' '120' '125' nan '104' nan '136' '122' '128' nan '134' '120' nan
+ '152' '124' '126' '138' '154' nan nan '178' nan '110' '130' '170' '126'
+ '140' '142' '120' nan nan '110' '140' nan '136' '120' '170' '130' nan
+ '142' '142' '132' '146' '160' '135' '136' '130' '140' nan '158' nan '136'
+ '106' '120' '110' nan '160' nan '112' '122' '130' '150' '150' '102' '96'
+ '130' '120' '144' '124' '150' nan nan nan nan nan nan nan '116' '110'
+ '125' nan nan '150' '130' '110' nan '104' '138' '170' '140' nan '132'
+ '142' '112' nan '172' '120' nan nan '155' '150' '160' nan nan '134' nan
+ nan '140' nan '144' nan '150' '130' '110' '158' '128' nan '150' '160' nan
+ nan nan nan '156' nan nan '140' '122' nan nan '180' '124' '118' '140'
+ '140' nan '100' '190' '130' '160' '130' '122' nan '120' '130' '130' nan
+ '120' '150' '155' '134' '114' '160' '144' '158' '134' '127' nan '122' nan
+ '120'] to numeric
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/pharse2_main.py", line 140, in main
+    processed_data = preprocess_heart_disease_data(raw_data)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 250, in preprocess_heart_disease_data
+    df_cleaned = handle_missing_values(df)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 62, in handle_missing_values
+    median_val = processed_df[col].median()
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/series.py", line 6559, in median
+    return NDFrame.median(self, axis, skipna, numeric_only, **kwargs)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 12431, in median
+    return self._stat_function(
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/series.py", line 6457, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/nanops.py", line 787, in nanmedian
+    raise TypeError(f"Cannot convert {values} to numeric")
+TypeError: Cannot convert [145.0 160.0 120.0 130.0 130.0 120.0 140.0 120.0 130.0 140.0 140.0 140.0
+ 130.0 120.0 172.0 150.0 110.0 140.0 130.0 130.0 110.0 150.0 120.0 132.0
+ 130.0 120.0 120.0 150.0 150.0 110.0 140.0 117.0 140.0 135.0 130.0 140.0
+ 120.0 150.0 132.0 150.0 150.0 140.0 160.0 150.0 130.0 112.0 110.0 150.0
+ 140.0 130.0 105.0 120.0 112.0 130.0 130.0 124.0 140.0 110.0 125.0 125.0
+ 130.0 142.0 128.0 135.0 120.0 145.0 140.0 150.0 170.0 150.0 155.0 125.0
+ 120.0 110.0 110.0 160.0 125.0 140.0 130.0 150.0 104.0 130.0 140.0 180.0
+ 120.0 140.0 138.0 128.0 138.0 130.0 120.0 160.0 130.0 108.0 135.0 128.0
+ 110.0 150.0 134.0 122.0 115.0 118.0 128.0 110.0 120.0 108.0 140.0 128.0
+ 120.0 118.0 145.0 125.0 118.0 132.0 130.0 135.0 140.0 138.0 130.0 135.0
+ 130.0 150.0 100.0 140.0 138.0 130.0 200.0 110.0 120.0 124.0 120.0 94.0
+ 130.0 140.0 122.0 135.0 145.0 120.0 120.0 125.0 140.0 170.0 128.0 125.0
+ 105.0 108.0 165.0 112.0 128.0 102.0 152.0 102.0 115.0 160.0 120.0 130.0
+ 140.0 125.0 140.0 118.0 101.0 125.0 110.0 100.0 124.0 132.0 138.0 132.0
+ 126.0 112.0 160.0 142.0 174.0 140.0 145.0 152.0 108.0 132.0 130.0 130.0
+ 124.0 134.0 148.0 178.0 158.0 140.0 120.0 160.0 192.0 140.0 129.0 140.0
+ 132.0 138.0 120.0 100.0 160.0 138.0 120.0 160.0 110.0 180.0 150.0 140.0
+ 110.0 142.0 128.0 144.0 130.0 150.0 120.0 120.0 130.0 178.0 112.0 120.0
+ 105.0 138.0 130.0 138.0 112.0 108.0 94.0 123.0 108.0 118.0 112.0 152.0
+ 110.0 112.0 136.0 180.0 118.0 120.0 160.0 122.0 130.0 120.0 134.0 120.0
+ 110.0 126.0 130.0 134.0 120.0 120.0 100.0 110.0 125.0 128.0 110.0 146.0
+ 128.0 120.0 115.0 120.0 106.0 140.0 156.0 124.0 118.0 136.0 150.0 120.0
+ 138.0 136.0 128.0 126.0 152.0 130.0 140.0 160.0 140.0 112.0 134.0 170.0
+ 146.0 138.0 154.0 130.0 110.0 130.0 128.0 122.0 148.0 114.0 170.0 125.0
+ 130.0 120.0 152.0 132.0 120.0 140.0 124.0 120.0 164.0 140.0 110.0 144.0
+ 130.0 130.0 138.0 '130' '120' '140' '170' '100' '105' '110' '125' '120'
+ '130' '150' '98' '120' '140' '120' '150' '120' '112' '130' '150' '120'
+ '130' '130' '130' '130' '120' '130' '120' '140' '145' '110' '120' '120'
+ '120' '130' '190' '120' '160' '110' '130' '130' '140' '130' '130' '140'
+ '110' '125' '130' '120' '120' '125' '112' '115' '120' '120' '150' '120'
+ '160' '140' '100' '120' '120' '120' '120' '150' '150' '142' '120' '120'
+ '130' '150' '130' '180' '132' '140' '135' '120' '140' '130' '140' '120'
+ '150' '110' '110' '180' '140' '130' '110' '160' '140' nan '120' '120'
+ '120' '108' '120' '150' '100' '130' '140' '110' '110' '110' '124' '130'
+ '100' '140' '120' '140' '110' '120' '120' '140' '170' '140' '150' '160'
+ '110' '130' '150' '125' '130' '130' '120' '140' '125' '130' '120' '140'
+ '160' '140' '113' '140' '120' '120' '140' '120' '124' '130' '140' '120'
+ '120' '120' '130' '140' '150' '160' '120' '110' '120' '120' '160' '160'
+ '120' '150' '150' '110' '122' '130' '120' '140' '145' '110' '120' '120'
+ '140' '130' '130' '130' '130' '120' '130' '180' '140' '130' '130' '140'
+ '135' '130' '140' '130' '180' '140' '120' '130' '125' '160' '140' '120'
+ '100' '140' '110' '120' '140' '110' '120' '92' '120' '110' '120' '150'
+ '110' '118' '120' '140' '150' '106' '120' '160' '160' '115' '130' '140'
+ '145' '160' '130' '125' '125' '140' '140' '130' '130' '100' '150' '140'
+ '118' '110' '110' '150' '120' '130' '120' '130' '122' '160' '160' '160'
+ '130' '120' '170' '120' '120' '130' '130' '140' '200' '140' '150' '150'
+ '160' '130' '130' '120' '150' '130' '140' '135' '138' '130' '140' '135'
+ '112' '130' '140' '160' '145' '180' '140' '140' '160' '145' '120' '150'
+ '170' '136' '130' '140' '170' '140' '120' '140' '135' '120' '160' '128'
+ '150' '140' '140' '140' '160' '130' '155' '180' '130' '95' '115' nan
+ '110' '105' '110' '100' '115' '135' '150' '95' '125' '105' '145' '100'
+ '115' '140' '110' '100' '115' '110' '155' '110' '160' '115' '160' '115'
+ '120' '145' '120' '110' '120' '130' '130' '140' '95' '130' '135' '165'
+ '95' '120' '130' '105' '160' '120' '125' '130' '80' '120' '130' '180'
+ '140' '115' '120' '140' '120' '125' '155' '115' '120' '120' '125' '140'
+ '105' '110' '140' '140' '160' '95' '115' '130' '170' '125' '110' '120'
+ '125' '135' '115' '125' '130' '135' '160' '160' '200' '105' '110' '125'
+ '130' '130' '150' '150' '160' '140' '120' '120' '160' '115' '115' '150'
+ '100' '140' '150' '150' '185' '200' '95' '110' '115' '145' '155' '160'
+ '155' '150' '145' '135' '145' '135' nan '115' '140' '160' '160' '145'
+ '140' '130' '132' '142' '110' '120' '150' '180' '120' '160' '126' '140'
+ '110' nan '128' '120' '170' '110' '126' '152' '116' '120' '130' nan '128'
+ '130' nan '130' '120' nan nan '124' '160' '0' '122' '144' nan '120' nan
+ '154' '120' '125' nan '104' nan '136' '122' '128' nan '134' '120' nan
+ '152' '124' '126' '138' '154' nan nan '178' nan '110' '130' '170' '126'
+ '140' '142' '120' nan nan '110' '140' nan '136' '120' '170' '130' nan
+ '142' '142' '132' '146' '160' '135' '136' '130' '140' nan '158' nan '136'
+ '106' '120' '110' nan '160' nan '112' '122' '130' '150' '150' '102' '96'
+ '130' '120' '144' '124' '150' nan nan nan nan nan nan nan '116' '110'
+ '125' nan nan '150' '130' '110' nan '104' '138' '170' '140' nan '132'
+ '142' '112' nan '172' '120' nan nan '155' '150' '160' nan nan '134' nan
+ nan '140' nan '144' nan '150' '130' '110' '158' '128' nan '150' '160' nan
+ nan nan nan '156' nan nan '140' '122' nan nan '180' '124' '118' '140'
+ '140' nan '100' '190' '130' '160' '130' '122' nan '120' '130' '130' nan
+ '120' '150' '155' '134' '114' '160' '144' '158' '134' '127' nan '122' nan
+ '120'] to numeric
+2025-03-30 15:11:08,404 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:11:08,404 - INFO - Step 1: Loading the raw data
+2025-03-30 15:11:08,405 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:11:08,411 - INFO - Added 303 records from cleveland
+2025-03-30 15:11:08,411 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:11:08,413 - INFO - Added 294 records from hungarian
+2025-03-30 15:11:08,413 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:11:08,415 - INFO - Added 123 records from switzerland
+2025-03-30 15:11:08,415 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:11:08,417 - INFO - Added 200 records from va
+2025-03-30 15:11:08,417 - INFO - Combined dataset has 920 records
+2025-03-30 15:11:08,417 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:11:08,423 - ERROR - Error in Phase 2 processing: Cannot convert [145.0 160.0 120.0 130.0 130.0 120.0 140.0 120.0 130.0 140.0 140.0 140.0
+ 130.0 120.0 172.0 150.0 110.0 140.0 130.0 130.0 110.0 150.0 120.0 132.0
+ 130.0 120.0 120.0 150.0 150.0 110.0 140.0 117.0 140.0 135.0 130.0 140.0
+ 120.0 150.0 132.0 150.0 150.0 140.0 160.0 150.0 130.0 112.0 110.0 150.0
+ 140.0 130.0 105.0 120.0 112.0 130.0 130.0 124.0 140.0 110.0 125.0 125.0
+ 130.0 142.0 128.0 135.0 120.0 145.0 140.0 150.0 170.0 150.0 155.0 125.0
+ 120.0 110.0 110.0 160.0 125.0 140.0 130.0 150.0 104.0 130.0 140.0 180.0
+ 120.0 140.0 138.0 128.0 138.0 130.0 120.0 160.0 130.0 108.0 135.0 128.0
+ 110.0 150.0 134.0 122.0 115.0 118.0 128.0 110.0 120.0 108.0 140.0 128.0
+ 120.0 118.0 145.0 125.0 118.0 132.0 130.0 135.0 140.0 138.0 130.0 135.0
+ 130.0 150.0 100.0 140.0 138.0 130.0 200.0 110.0 120.0 124.0 120.0 94.0
+ 130.0 140.0 122.0 135.0 145.0 120.0 120.0 125.0 140.0 170.0 128.0 125.0
+ 105.0 108.0 165.0 112.0 128.0 102.0 152.0 102.0 115.0 160.0 120.0 130.0
+ 140.0 125.0 140.0 118.0 101.0 125.0 110.0 100.0 124.0 132.0 138.0 132.0
+ 126.0 112.0 160.0 142.0 174.0 140.0 145.0 152.0 108.0 132.0 130.0 130.0
+ 124.0 134.0 148.0 178.0 158.0 140.0 120.0 160.0 192.0 140.0 129.0 140.0
+ 132.0 138.0 120.0 100.0 160.0 138.0 120.0 160.0 110.0 180.0 150.0 140.0
+ 110.0 142.0 128.0 144.0 130.0 150.0 120.0 120.0 130.0 178.0 112.0 120.0
+ 105.0 138.0 130.0 138.0 112.0 108.0 94.0 123.0 108.0 118.0 112.0 152.0
+ 110.0 112.0 136.0 180.0 118.0 120.0 160.0 122.0 130.0 120.0 134.0 120.0
+ 110.0 126.0 130.0 134.0 120.0 120.0 100.0 110.0 125.0 128.0 110.0 146.0
+ 128.0 120.0 115.0 120.0 106.0 140.0 156.0 124.0 118.0 136.0 150.0 120.0
+ 138.0 136.0 128.0 126.0 152.0 130.0 140.0 160.0 140.0 112.0 134.0 170.0
+ 146.0 138.0 154.0 130.0 110.0 130.0 128.0 122.0 148.0 114.0 170.0 125.0
+ 130.0 120.0 152.0 132.0 120.0 140.0 124.0 120.0 164.0 140.0 110.0 144.0
+ 130.0 130.0 138.0 '130' '120' '140' '170' '100' '105' '110' '125' '120'
+ '130' '150' '98' '120' '140' '120' '150' '120' '112' '130' '150' '120'
+ '130' '130' '130' '130' '120' '130' '120' '140' '145' '110' '120' '120'
+ '120' '130' '190' '120' '160' '110' '130' '130' '140' '130' '130' '140'
+ '110' '125' '130' '120' '120' '125' '112' '115' '120' '120' '150' '120'
+ '160' '140' '100' '120' '120' '120' '120' '150' '150' '142' '120' '120'
+ '130' '150' '130' '180' '132' '140' '135' '120' '140' '130' '140' '120'
+ '150' '110' '110' '180' '140' '130' '110' '160' '140' nan '120' '120'
+ '120' '108' '120' '150' '100' '130' '140' '110' '110' '110' '124' '130'
+ '100' '140' '120' '140' '110' '120' '120' '140' '170' '140' '150' '160'
+ '110' '130' '150' '125' '130' '130' '120' '140' '125' '130' '120' '140'
+ '160' '140' '113' '140' '120' '120' '140' '120' '124' '130' '140' '120'
+ '120' '120' '130' '140' '150' '160' '120' '110' '120' '120' '160' '160'
+ '120' '150' '150' '110' '122' '130' '120' '140' '145' '110' '120' '120'
+ '140' '130' '130' '130' '130' '120' '130' '180' '140' '130' '130' '140'
+ '135' '130' '140' '130' '180' '140' '120' '130' '125' '160' '140' '120'
+ '100' '140' '110' '120' '140' '110' '120' '92' '120' '110' '120' '150'
+ '110' '118' '120' '140' '150' '106' '120' '160' '160' '115' '130' '140'
+ '145' '160' '130' '125' '125' '140' '140' '130' '130' '100' '150' '140'
+ '118' '110' '110' '150' '120' '130' '120' '130' '122' '160' '160' '160'
+ '130' '120' '170' '120' '120' '130' '130' '140' '200' '140' '150' '150'
+ '160' '130' '130' '120' '150' '130' '140' '135' '138' '130' '140' '135'
+ '112' '130' '140' '160' '145' '180' '140' '140' '160' '145' '120' '150'
+ '170' '136' '130' '140' '170' '140' '120' '140' '135' '120' '160' '128'
+ '150' '140' '140' '140' '160' '130' '155' '180' '130' '95' '115' nan
+ '110' '105' '110' '100' '115' '135' '150' '95' '125' '105' '145' '100'
+ '115' '140' '110' '100' '115' '110' '155' '110' '160' '115' '160' '115'
+ '120' '145' '120' '110' '120' '130' '130' '140' '95' '130' '135' '165'
+ '95' '120' '130' '105' '160' '120' '125' '130' '80' '120' '130' '180'
+ '140' '115' '120' '140' '120' '125' '155' '115' '120' '120' '125' '140'
+ '105' '110' '140' '140' '160' '95' '115' '130' '170' '125' '110' '120'
+ '125' '135' '115' '125' '130' '135' '160' '160' '200' '105' '110' '125'
+ '130' '130' '150' '150' '160' '140' '120' '120' '160' '115' '115' '150'
+ '100' '140' '150' '150' '185' '200' '95' '110' '115' '145' '155' '160'
+ '155' '150' '145' '135' '145' '135' nan '115' '140' '160' '160' '145'
+ '140' '130' '132' '142' '110' '120' '150' '180' '120' '160' '126' '140'
+ '110' nan '128' '120' '170' '110' '126' '152' '116' '120' '130' nan '128'
+ '130' nan '130' '120' nan nan '124' '160' '0' '122' '144' nan '120' nan
+ '154' '120' '125' nan '104' nan '136' '122' '128' nan '134' '120' nan
+ '152' '124' '126' '138' '154' nan nan '178' nan '110' '130' '170' '126'
+ '140' '142' '120' nan nan '110' '140' nan '136' '120' '170' '130' nan
+ '142' '142' '132' '146' '160' '135' '136' '130' '140' nan '158' nan '136'
+ '106' '120' '110' nan '160' nan '112' '122' '130' '150' '150' '102' '96'
+ '130' '120' '144' '124' '150' nan nan nan nan nan nan nan '116' '110'
+ '125' nan nan '150' '130' '110' nan '104' '138' '170' '140' nan '132'
+ '142' '112' nan '172' '120' nan nan '155' '150' '160' nan nan '134' nan
+ nan '140' nan '144' nan '150' '130' '110' '158' '128' nan '150' '160' nan
+ nan nan nan '156' nan nan '140' '122' nan nan '180' '124' '118' '140'
+ '140' nan '100' '190' '130' '160' '130' '122' nan '120' '130' '130' nan
+ '120' '150' '155' '134' '114' '160' '144' '158' '134' '127' nan '122' nan
+ '120'] to numeric
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/pharse2_main.py", line 140, in main
+    processed_data = preprocess_heart_disease_data(raw_data)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 250, in preprocess_heart_disease_data
+    df_cleaned = handle_missing_values(df)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 62, in handle_missing_values
+    median_val = processed_df[col].median()
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/series.py", line 6559, in median
+    return NDFrame.median(self, axis, skipna, numeric_only, **kwargs)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 12431, in median
+    return self._stat_function(
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/series.py", line 6457, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/nanops.py", line 787, in nanmedian
+    raise TypeError(f"Cannot convert {values} to numeric")
+TypeError: Cannot convert [145.0 160.0 120.0 130.0 130.0 120.0 140.0 120.0 130.0 140.0 140.0 140.0
+ 130.0 120.0 172.0 150.0 110.0 140.0 130.0 130.0 110.0 150.0 120.0 132.0
+ 130.0 120.0 120.0 150.0 150.0 110.0 140.0 117.0 140.0 135.0 130.0 140.0
+ 120.0 150.0 132.0 150.0 150.0 140.0 160.0 150.0 130.0 112.0 110.0 150.0
+ 140.0 130.0 105.0 120.0 112.0 130.0 130.0 124.0 140.0 110.0 125.0 125.0
+ 130.0 142.0 128.0 135.0 120.0 145.0 140.0 150.0 170.0 150.0 155.0 125.0
+ 120.0 110.0 110.0 160.0 125.0 140.0 130.0 150.0 104.0 130.0 140.0 180.0
+ 120.0 140.0 138.0 128.0 138.0 130.0 120.0 160.0 130.0 108.0 135.0 128.0
+ 110.0 150.0 134.0 122.0 115.0 118.0 128.0 110.0 120.0 108.0 140.0 128.0
+ 120.0 118.0 145.0 125.0 118.0 132.0 130.0 135.0 140.0 138.0 130.0 135.0
+ 130.0 150.0 100.0 140.0 138.0 130.0 200.0 110.0 120.0 124.0 120.0 94.0
+ 130.0 140.0 122.0 135.0 145.0 120.0 120.0 125.0 140.0 170.0 128.0 125.0
+ 105.0 108.0 165.0 112.0 128.0 102.0 152.0 102.0 115.0 160.0 120.0 130.0
+ 140.0 125.0 140.0 118.0 101.0 125.0 110.0 100.0 124.0 132.0 138.0 132.0
+ 126.0 112.0 160.0 142.0 174.0 140.0 145.0 152.0 108.0 132.0 130.0 130.0
+ 124.0 134.0 148.0 178.0 158.0 140.0 120.0 160.0 192.0 140.0 129.0 140.0
+ 132.0 138.0 120.0 100.0 160.0 138.0 120.0 160.0 110.0 180.0 150.0 140.0
+ 110.0 142.0 128.0 144.0 130.0 150.0 120.0 120.0 130.0 178.0 112.0 120.0
+ 105.0 138.0 130.0 138.0 112.0 108.0 94.0 123.0 108.0 118.0 112.0 152.0
+ 110.0 112.0 136.0 180.0 118.0 120.0 160.0 122.0 130.0 120.0 134.0 120.0
+ 110.0 126.0 130.0 134.0 120.0 120.0 100.0 110.0 125.0 128.0 110.0 146.0
+ 128.0 120.0 115.0 120.0 106.0 140.0 156.0 124.0 118.0 136.0 150.0 120.0
+ 138.0 136.0 128.0 126.0 152.0 130.0 140.0 160.0 140.0 112.0 134.0 170.0
+ 146.0 138.0 154.0 130.0 110.0 130.0 128.0 122.0 148.0 114.0 170.0 125.0
+ 130.0 120.0 152.0 132.0 120.0 140.0 124.0 120.0 164.0 140.0 110.0 144.0
+ 130.0 130.0 138.0 '130' '120' '140' '170' '100' '105' '110' '125' '120'
+ '130' '150' '98' '120' '140' '120' '150' '120' '112' '130' '150' '120'
+ '130' '130' '130' '130' '120' '130' '120' '140' '145' '110' '120' '120'
+ '120' '130' '190' '120' '160' '110' '130' '130' '140' '130' '130' '140'
+ '110' '125' '130' '120' '120' '125' '112' '115' '120' '120' '150' '120'
+ '160' '140' '100' '120' '120' '120' '120' '150' '150' '142' '120' '120'
+ '130' '150' '130' '180' '132' '140' '135' '120' '140' '130' '140' '120'
+ '150' '110' '110' '180' '140' '130' '110' '160' '140' nan '120' '120'
+ '120' '108' '120' '150' '100' '130' '140' '110' '110' '110' '124' '130'
+ '100' '140' '120' '140' '110' '120' '120' '140' '170' '140' '150' '160'
+ '110' '130' '150' '125' '130' '130' '120' '140' '125' '130' '120' '140'
+ '160' '140' '113' '140' '120' '120' '140' '120' '124' '130' '140' '120'
+ '120' '120' '130' '140' '150' '160' '120' '110' '120' '120' '160' '160'
+ '120' '150' '150' '110' '122' '130' '120' '140' '145' '110' '120' '120'
+ '140' '130' '130' '130' '130' '120' '130' '180' '140' '130' '130' '140'
+ '135' '130' '140' '130' '180' '140' '120' '130' '125' '160' '140' '120'
+ '100' '140' '110' '120' '140' '110' '120' '92' '120' '110' '120' '150'
+ '110' '118' '120' '140' '150' '106' '120' '160' '160' '115' '130' '140'
+ '145' '160' '130' '125' '125' '140' '140' '130' '130' '100' '150' '140'
+ '118' '110' '110' '150' '120' '130' '120' '130' '122' '160' '160' '160'
+ '130' '120' '170' '120' '120' '130' '130' '140' '200' '140' '150' '150'
+ '160' '130' '130' '120' '150' '130' '140' '135' '138' '130' '140' '135'
+ '112' '130' '140' '160' '145' '180' '140' '140' '160' '145' '120' '150'
+ '170' '136' '130' '140' '170' '140' '120' '140' '135' '120' '160' '128'
+ '150' '140' '140' '140' '160' '130' '155' '180' '130' '95' '115' nan
+ '110' '105' '110' '100' '115' '135' '150' '95' '125' '105' '145' '100'
+ '115' '140' '110' '100' '115' '110' '155' '110' '160' '115' '160' '115'
+ '120' '145' '120' '110' '120' '130' '130' '140' '95' '130' '135' '165'
+ '95' '120' '130' '105' '160' '120' '125' '130' '80' '120' '130' '180'
+ '140' '115' '120' '140' '120' '125' '155' '115' '120' '120' '125' '140'
+ '105' '110' '140' '140' '160' '95' '115' '130' '170' '125' '110' '120'
+ '125' '135' '115' '125' '130' '135' '160' '160' '200' '105' '110' '125'
+ '130' '130' '150' '150' '160' '140' '120' '120' '160' '115' '115' '150'
+ '100' '140' '150' '150' '185' '200' '95' '110' '115' '145' '155' '160'
+ '155' '150' '145' '135' '145' '135' nan '115' '140' '160' '160' '145'
+ '140' '130' '132' '142' '110' '120' '150' '180' '120' '160' '126' '140'
+ '110' nan '128' '120' '170' '110' '126' '152' '116' '120' '130' nan '128'
+ '130' nan '130' '120' nan nan '124' '160' '0' '122' '144' nan '120' nan
+ '154' '120' '125' nan '104' nan '136' '122' '128' nan '134' '120' nan
+ '152' '124' '126' '138' '154' nan nan '178' nan '110' '130' '170' '126'
+ '140' '142' '120' nan nan '110' '140' nan '136' '120' '170' '130' nan
+ '142' '142' '132' '146' '160' '135' '136' '130' '140' nan '158' nan '136'
+ '106' '120' '110' nan '160' nan '112' '122' '130' '150' '150' '102' '96'
+ '130' '120' '144' '124' '150' nan nan nan nan nan nan nan '116' '110'
+ '125' nan nan '150' '130' '110' nan '104' '138' '170' '140' nan '132'
+ '142' '112' nan '172' '120' nan nan '155' '150' '160' nan nan '134' nan
+ nan '140' nan '144' nan '150' '130' '110' '158' '128' nan '150' '160' nan
+ nan nan nan '156' nan nan '140' '122' nan nan '180' '124' '118' '140'
+ '140' nan '100' '190' '130' '160' '130' '122' nan '120' '130' '130' nan
+ '120' '150' '155' '134' '114' '160' '144' '158' '134' '127' nan '122' nan
+ '120'] to numeric
+2025-03-30 15:15:01,841 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:15:01,842 - INFO - Step 1: Loading the raw data
+2025-03-30 15:15:01,844 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:15:01,856 - INFO - Added 303 records from cleveland
+2025-03-30 15:15:01,856 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:15:01,861 - INFO - Added 294 records from hungarian
+2025-03-30 15:15:01,861 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:15:01,866 - INFO - Added 123 records from switzerland
+2025-03-30 15:15:01,866 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:15:01,869 - INFO - Added 200 records from va
+2025-03-30 15:15:01,869 - INFO - Combined dataset has 920 records
+2025-03-30 15:15:01,869 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:15:01,878 - ERROR - Error in Phase 2 processing: 'NoneType' object has no attribute 'copy'
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/pharse2_main.py", line 140, in main
+    processed_data = preprocess_heart_disease_data(raw_data)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 205, in preprocess_heart_disease_data
+    df_cleaned = detect_and_handle_outliers(df_cleaned)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/data_preprocessing.py", line 69, in detect_and_handle_outliers
+    processed_df = df.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2025-03-30 15:16:38,255 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:16:38,256 - INFO - Step 1: Loading the raw data
+2025-03-30 15:16:38,257 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:16:38,262 - INFO - Added 303 records from cleveland
+2025-03-30 15:16:38,262 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:16:38,265 - INFO - Added 294 records from hungarian
+2025-03-30 15:16:38,265 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:16:38,266 - INFO - Added 123 records from switzerland
+2025-03-30 15:16:38,266 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:16:38,268 - INFO - Added 200 records from va
+2025-03-30 15:16:38,268 - INFO - Combined dataset has 920 records
+2025-03-30 15:16:38,268 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:16:38,346 - INFO - Results saved to results/preprocessing_documentation.json
+2025-03-30 15:16:38,346 - INFO - Step 3: Performing statistical analysis
+2025-03-30 15:16:38,380 - ERROR - Error in Phase 2 processing: 'target_binary'
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'target_binary'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Applications/AI/Health/heart-disease-analysis-uci/pharse2_main.py", line 148, in main
+    statistical_results = perform_statistical_analysis(processed_data)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/statistical_analysis.py", line 680, in perform_statistical_analysis
+    results['gender_analysis'] = segment_analysis_by_gender(df)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/statistical_analysis.py", line 118, in segment_analysis_by_gender
+    'disease_count': [female_df['target_binary'].sum(), male_df['target_binary'].sum()],
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Applications/AI/Health/heart-disease-analysis-uci/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'target_binary'
+2025-03-30 15:20:08,825 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:20:08,826 - INFO - Step 1: Loading the raw data
+2025-03-30 15:20:08,827 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:20:08,832 - INFO - Added 303 records from cleveland
+2025-03-30 15:20:08,832 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:20:08,835 - INFO - Added 294 records from hungarian
+2025-03-30 15:20:08,835 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:20:08,836 - INFO - Added 123 records from switzerland
+2025-03-30 15:20:08,837 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:20:08,838 - INFO - Added 200 records from va
+2025-03-30 15:20:08,838 - INFO - Combined dataset has 920 records
+2025-03-30 15:20:08,839 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:20:08,911 - INFO - Results saved to results/preprocessing_documentation.json
+2025-03-30 15:20:08,911 - INFO - Step 3: Performing statistical analysis
+2025-03-30 15:20:09,217 - ERROR - Error saving results to results/statistical_analysis_results.json: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-03-30 15:20:09,217 - INFO - Step 4: Creating visualizations
+2025-03-30 15:20:17,571 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:17,582 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:17,845 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:17,849 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,386 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,390 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,658 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,662 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,907 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:18,911 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:19,795 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:19,798 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:20,836 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:20,840 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:21,760 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:21,763 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,326 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,329 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,777 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,780 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,807 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:22,810 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:23,258 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:23,261 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:23,287 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:23,290 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,236 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,239 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,266 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,269 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,718 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,721 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,753 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:24,756 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,339 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,342 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,370 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,373 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,823 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,826 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,851 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:25,853 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:27,732 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:27,735 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:27,757 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:27,760 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,154 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,157 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,186 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,189 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,635 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,638 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,663 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:28,666 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:29,104 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:29,107 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:29,132 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:29,135 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:31,967 - WARNING - posx and posy should be finite values
+2025-03-30 15:20:32,044 - WARNING - posx and posy should be finite values
+2025-03-30 15:20:32,235 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:32,244 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:32,267 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:32,270 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:33,244 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:33,249 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:33,348 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:33,351 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:35,564 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:35,579 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:35,666 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:35,675 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:39,766 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:39,773 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:39,808 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:39,813 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:42,532 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:42,547 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:42,585 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:42,590 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:51,377 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:51,387 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:51,415 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:51,419 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:55,687 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:55,705 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:55,765 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:55,777 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:57,515 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:57,530 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:57,566 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:20:57,571 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,190 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,198 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,654 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,659 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,924 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:00,928 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:01,436 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:01,441 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:03,539 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:03,544 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:03,890 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:03,898 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:04,180 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:04,184 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:04,485 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:04,490 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:06,681 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:06,685 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:06,930 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:06,934 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:07,186 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:07,191 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:07,458 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:07,462 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:09,480 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:09,485 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:09,753 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:09,757 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:10,046 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:10,050 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:10,335 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:10,340 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:12,851 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:12,858 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,199 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,203 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,463 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,468 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,750 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:13,754 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,116 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,121 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,514 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,519 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,558 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:24,562 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:21:25,860 - INFO - Results saved to results/visualization_results.json
+2025-03-30 15:21:25,879 - INFO - Processed dataset saved to results/processed_heart_disease_data.csv
+2025-03-30 15:21:25,879 - INFO - Step 5: Generating summary report
+2025-03-30 15:21:25,881 - INFO - Summary report generated at results/phase2_summary_report.md
+2025-03-30 15:21:25,881 - INFO - Phase 2 processing completed successfully in 77.06 seconds
+2025-03-30 15:25:08,536 - INFO - Starting Phase 2 processing pipeline
+2025-03-30 15:25:08,536 - INFO - Step 1: Loading the raw data
+2025-03-30 15:25:08,539 - INFO - Loading cleveland dataset from data/processed.cleveland.data
+2025-03-30 15:25:08,551 - INFO - Added 303 records from cleveland
+2025-03-30 15:25:08,552 - INFO - Loading hungarian dataset from data/processed.hungarian.data
+2025-03-30 15:25:08,554 - INFO - Added 294 records from hungarian
+2025-03-30 15:25:08,555 - INFO - Loading switzerland dataset from data/processed.switzerland.data
+2025-03-30 15:25:08,557 - INFO - Added 123 records from switzerland
+2025-03-30 15:25:08,557 - INFO - Loading va dataset from data/processed.va.data
+2025-03-30 15:25:08,559 - INFO - Added 200 records from va
+2025-03-30 15:25:08,559 - INFO - Combined dataset has 920 records
+2025-03-30 15:25:08,559 - INFO - Step 2: Preprocessing the data
+2025-03-30 15:25:08,640 - INFO - Results saved to results/preprocessing_documentation.json
+2025-03-30 15:25:08,640 - INFO - Step 3: Performing statistical analysis
+2025-03-30 15:25:09,000 - ERROR - Error saving results to results/statistical_analysis_results.json: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-03-30 15:25:09,000 - INFO - Step 4: Creating visualizations
+2025-03-30 15:25:17,103 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:17,112 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:17,621 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:17,625 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:18,138 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:18,141 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:18,395 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:18,398 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:19,475 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:19,478 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:20,343 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:20,346 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:20,981 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:20,984 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:21,230 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:21,233 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,245 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,248 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,273 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,276 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,701 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,704 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,729 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:22,732 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,160 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,163 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,191 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,194 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,635 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,638 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,663 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:23,666 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:24,097 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:24,101 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:24,123 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:24,125 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,034 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,037 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,062 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,065 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,493 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:25,496 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,439 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,442 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,471 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,474 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,929 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,932 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,960 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:26,963 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:27,407 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:27,410 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:27,439 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:27,442 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:28,379 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:28,382 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:28,414 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:28,417 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:31,271 - WARNING - posx and posy should be finite values
+2025-03-30 15:25:31,347 - WARNING - posx and posy should be finite values
+2025-03-30 15:25:31,515 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:31,519 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:31,541 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:31,544 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:32,533 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:32,537 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:32,562 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:32,565 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:34,599 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:34,603 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:34,625 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:34,628 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:36,560 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:36,564 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:36,587 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:36,589 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:37,700 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:37,705 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:37,725 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:37,728 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:41,977 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:41,981 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:42,002 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:42,005 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,018 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,022 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,047 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,050 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,866 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,870 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,891 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:43,893 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,436 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,440 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,692 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,696 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,950 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:45,954 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:46,294 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:46,298 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,327 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,332 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,622 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,626 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,895 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:48,900 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:49,188 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:49,192 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,381 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,386 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,634 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,638 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,887 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:51,892 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:52,160 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:52,164 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,194 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,198 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,479 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,483 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,759 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:54,763 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:55,055 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:55,060 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,295 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,299 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,581 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,585 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,846 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:57,850 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:58,122 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:25:58,126 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,444 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,450 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,819 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,823 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,868 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:08,872 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-30 15:26:11,441 - INFO - Results saved to results/visualization_results.json
+2025-03-30 15:26:11,488 - INFO - Processed dataset saved to results/processed_heart_disease_data.csv
+2025-03-30 15:26:11,488 - INFO - Step 5: Generating summary report
+2025-03-30 15:26:11,503 - INFO - Summary report generated at results/phase2_summary_report.md
+2025-03-30 15:26:11,503 - INFO - Phase 2 processing completed successfully in 62.97 seconds
