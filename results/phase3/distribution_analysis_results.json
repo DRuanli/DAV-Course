@@ -1,0 +1,2575 @@
+{
+    "variable_distributions": {
+        "age": {
+            "count": 920,
+            "missing": 0,
+            "mean": 53.51086956521739,
+            "median": 54.0,
+            "std": 9.424685209576857,
+            "min": 28.0,
+            "max": 77.0,
+            "range": 49.0,
+            "iqr": 13.0,
+            "skewness": -0.19567416156265732,
+            "kurtosis": -0.387366500445804,
+            "normality_tests": {
+                "shapiro": {
+                    "statistic": 0.9910701721776326,
+                    "p_value": 2.2675452652561025e-05,
+                    "normal": false
+                },
+                "ks": {
+                    "statistic": 0.06309791027065953,
+                    "p_value": 0.0012565757970961077,
+                    "normal": false
+                },
+                "anderson": {
+                    "statistic": 2.7677666399666805,
+                    "critical_values": [
+                        0.574,
+                        0.653,
+                        0.784,
+                        0.914,
+                        1.087
+                    ],
+                    "significance_levels": [
+                        15.0,
+                        10.0,
+                        5.0,
+                        2.5,
+                        1.0
+                    ],
+                    "normal": false
+                }
+            },
+            "is_normal": false,
+            "distribution_plot": "results/phase3/figures/age_distribution.png",
+            "qq_plot": "results/phase3/figures/age_qq_plot.png",
+            "distribution_type": "Approximately normal",
+            "medical_interpretation": "Age distribution appears balanced, suggesting a representative sample across age groups."
+        },
+        "chol": {
+            "count": 920,
+            "missing": 0,
+            "mean": 236.2521739130435,
+            "median": 234.0,
+            "std": 51.5266973455373,
+            "min": 124.5,
+            "max": 352.5,
+            "range": 228.0,
+            "iqr": 57.0,
+            "skewness": -0.022291099759672046,
+            "kurtosis": 0.19835512616041973,
+            "normality_tests": {
+                "shapiro": {
+                    "statistic": 0.9682087709583014,
+                    "p_value": 2.7533755260953866e-13,
+                    "normal": false
+                },
+                "ks": {
+                    "statistic": 0.1022238513275544,
+                    "p_value": 8.007200171887347e-09,
+                    "normal": false
+                },
+                "anderson": {
+                    "statistic": 9.90008501390821,
+                    "critical_values": [
+                        0.574,
+                        0.653,
+                        0.784,
+                        0.914,
+                        1.087
+                    ],
+                    "significance_levels": [
+                        15.0,
+                        10.0,
+                        5.0,
+                        2.5,
+                        1.0
+                    ],
+                    "normal": false
+                }
+            },
+            "is_normal": false,
+            "distribution_plot": "results/phase3/figures/chol_distribution.png",
+            "qq_plot": "results/phase3/figures/chol_qq_plot.png",
+            "distribution_type": "Approximately normal",
+            "medical_interpretation": "Cholesterol distribution is relatively symmetric, suggesting a well-distributed range of cholesterol levels."
+        },
+        "thalach": {
+            "count": 920,
+            "missing": 0,
+            "mean": 137.70217391304348,
+            "median": 140.0,
+            "std": 25.116321240528542,
+            "min": 66.0,
+            "max": 202.0,
+            "range": 136.0,
+            "iqr": 36.0,
+            "skewness": -0.22639675723278635,
+            "kurtosis": -0.3490866237658854,
+            "normality_tests": {
+                "shapiro": {
+                    "statistic": 0.9912480626531359,
+                    "p_value": 2.8040895919081838e-05,
+                    "normal": false
+                },
+                "ks": {
+                    "statistic": 0.07885840145065687,
+                    "p_value": 2.009729538319104e-05,
+                    "normal": false
+                },
+                "anderson": {
+                    "statistic": 2.080886153213214,
+                    "critical_values": [
+                        0.574,
+                        0.653,
+                        0.784,
+                        0.914,
+                        1.087
+                    ],
+                    "significance_levels": [
+                        15.0,
+                        10.0,
+                        5.0,
+                        2.5,
+                        1.0
+                    ],
+                    "normal": false
+                }
+            },
+            "is_normal": false,
+            "distribution_plot": "results/phase3/figures/thalach_distribution.png",
+            "qq_plot": "results/phase3/figures/thalach_qq_plot.png",
+            "distribution_type": "Approximately normal",
+            "medical_interpretation": "Maximum heart rate distribution shows expected pattern for a diverse cardiac patient population."
+        },
+        "oldpeak": {
+            "count": 920,
+            "missing": 0,
+            "mean": 0.8436956521739131,
+            "median": 0.5,
+            "std": 1.0226400336879085,
+            "min": -2.25,
+            "max": 3.75,
+            "range": 6.0,
+            "iqr": 1.5,
+            "skewness": 0.926771087097348,
+            "kurtosis": 0.25436891930758776,
+            "normality_tests": {
+                "shapiro": {
+                    "statistic": 0.8557151549576877,
+                    "p_value": 3.503419073653291e-28,
+                    "normal": false
+                },
+                "ks": {
+                    "statistic": 0.21066384637929708,
+                    "p_value": 2.667761269591197e-36,
+                    "normal": false
+                },
+                "anderson": {
+                    "statistic": 51.773943068688254,
+                    "critical_values": [
+                        0.574,
+                        0.653,
+                        0.784,
+                        0.914,
+                        1.087
+                    ],
+                    "significance_levels": [
+                        15.0,
+                        10.0,
+                        5.0,
+                        2.5,
+                        1.0
+                    ],
+                    "normal": false
+                }
+            },
+            "is_normal": false,
+            "distribution_plot": "results/phase3/figures/oldpeak_distribution.png",
+            "qq_plot": "results/phase3/figures/oldpeak_qq_plot.png",
+            "distribution_type": "Moderately non-normal",
+            "medical_interpretation": "ST depression distribution is right-skewed, with most patients showing smaller depressions and fewer patients with severe ST depression."
+        },
+        "trestbps": {
+            "count": 920,
+            "missing": 0,
+            "mean": 131.725,
+            "median": 130.0,
+            "std": 16.92187209408763,
+            "min": 90.0,
+            "max": 170.0,
+            "range": 80.0,
+            "iqr": 20.0,
+            "skewness": 0.33579217711617654,
+            "kurtosis": -0.1965458398775728,
+            "normality_tests": {
+                "shapiro": {
+                    "statistic": 0.9718952004441151,
+                    "p_value": 2.45777878471453e-12,
+                    "normal": false
+                },
+                "ks": {
+                    "statistic": 0.1351847060013588,
+                    "p_value": 3.997892467923356e-15,
+                    "normal": false
+                },
+                "anderson": {
+                    "statistic": 9.247624950437057,
+                    "critical_values": [
+                        0.574,
+                        0.653,
+                        0.784,
+                        0.914,
+                        1.087
+                    ],
+                    "significance_levels": [
+                        15.0,
+                        10.0,
+                        5.0,
+                        2.5,
+                        1.0
+                    ],
+                    "normal": false
+                }
+            },
+            "is_normal": false,
+            "distribution_plot": "results/phase3/figures/trestbps_distribution.png",
+            "qq_plot": "results/phase3/figures/trestbps_qq_plot.png",
+            "distribution_type": "Approximately normal",
+            "medical_interpretation": "Distribution of trestbps provides insights into the spread and central tendency of this parameter in the patient population."
+        }
+    },
+    "normality_tests": {
+        "age": {
+            "shapiro": {
+                "statistic": 0.9910701721776326,
+                "p_value": 2.2675452652561025e-05,
+                "normal": false
+            },
+            "ks": {
+                "statistic": 0.06309791027065953,
+                "p_value": 0.0012565757970961077,
+                "normal": false
+            },
+            "anderson": {
+                "statistic": 2.7677666399666805,
+                "critical_values": [
+                    0.574,
+                    0.653,
+                    0.784,
+                    0.914,
+                    1.087
+                ],
+                "significance_levels": [
+                    15.0,
+                    10.0,
+                    5.0,
+                    2.5,
+                    1.0
+                ],
+                "normal": false
+            }
+        },
+        "chol": {
+            "shapiro": {
+                "statistic": 0.9682087709583014,
+                "p_value": 2.7533755260953866e-13,
+                "normal": false
+            },
+            "ks": {
+                "statistic": 0.1022238513275544,
+                "p_value": 8.007200171887347e-09,
+                "normal": false
+            },
+            "anderson": {
+                "statistic": 9.90008501390821,
+                "critical_values": [
+                    0.574,
+                    0.653,
+                    0.784,
+                    0.914,
+                    1.087
+                ],
+                "significance_levels": [
+                    15.0,
+                    10.0,
+                    5.0,
+                    2.5,
+                    1.0
+                ],
+                "normal": false
+            }
+        },
+        "thalach": {
+            "shapiro": {
+                "statistic": 0.9912480626531359,
+                "p_value": 2.8040895919081838e-05,
+                "normal": false
+            },
+            "ks": {
+                "statistic": 0.07885840145065687,
+                "p_value": 2.009729538319104e-05,
+                "normal": false
+            },
+            "anderson": {
+                "statistic": 2.080886153213214,
+                "critical_values": [
+                    0.574,
+                    0.653,
+                    0.784,
+                    0.914,
+                    1.087
+                ],
+                "significance_levels": [
+                    15.0,
+                    10.0,
+                    5.0,
+                    2.5,
+                    1.0
+                ],
+                "normal": false
+            }
+        },
+        "oldpeak": {
+            "shapiro": {
+                "statistic": 0.8557151549576877,
+                "p_value": 3.503419073653291e-28,
+                "normal": false
+            },
+            "ks": {
+                "statistic": 0.21066384637929708,
+                "p_value": 2.667761269591197e-36,
+                "normal": false
+            },
+            "anderson": {
+                "statistic": 51.773943068688254,
+                "critical_values": [
+                    0.574,
+                    0.653,
+                    0.784,
+                    0.914,
+                    1.087
+                ],
+                "significance_levels": [
+                    15.0,
+                    10.0,
+                    5.0,
+                    2.5,
+                    1.0
+                ],
+                "normal": false
+            }
+        },
+        "trestbps": {
+            "shapiro": {
+                "statistic": 0.9718952004441151,
+                "p_value": 2.45777878471453e-12,
+                "normal": false
+            },
+            "ks": {
+                "statistic": 0.1351847060013588,
+                "p_value": 3.997892467923356e-15,
+                "normal": false
+            },
+            "anderson": {
+                "statistic": 9.247624950437057,
+                "critical_values": [
+                    0.574,
+                    0.653,
+                    0.784,
+                    0.914,
+                    1.087
+                ],
+                "significance_levels": [
+                    15.0,
+                    10.0,
+                    5.0,
+                    2.5,
+                    1.0
+                ],
+                "normal": false
+            }
+        }
+    },
+    "segment_analyses": {
+        "age": {
+            "target_binary": {
+                "segments": [
+                    "0",
+                    "1"
+                ],
+                "segment_plot": "results/phase3/figures/age_by_target_binary.png",
+                "segment_stats": {
+                    "No Disease": {
+                        "count": 411,
+                        "mean": 50.54744525547445,
+                        "median": 51.0,
+                        "std": 9.433699946302818,
+                        "min": 28.0,
+                        "max": 76.0,
+                        "skewness": 0.08139214453298221,
+                        "kurtosis": -0.41195125230228413,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9930061448188856,
+                                "p_value": 0.05275654438096858,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.05200078910625805,
+                                "p_value": 0.208971377074178,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.8789749708676027,
+                                "critical_values": [
+                                    0.571,
+                                    0.65,
+                                    0.78,
+                                    0.909,
+                                    1.082
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Disease": {
+                        "count": 509,
+                        "mean": 55.90373280943025,
+                        "median": 57.0,
+                        "std": 8.718958764910905,
+                        "min": 31.0,
+                        "max": 77.0,
+                        "skewness": -0.37920034733426883,
+                        "kurtosis": 0.0014728678789932559,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9850206997208207,
+                                "p_value": 4.260286639297379e-05,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.07165009521505145,
+                                "p_value": 0.01020864909599956,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.5335751460798974,
+                                "critical_values": [
+                                    0.572,
+                                    0.651,
+                                    0.781,
+                                    0.911,
+                                    1.084
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 69330.0,
+                    "p_value": 1.288873276620284e-18,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.5921716295813191,
+                    "interpretation": "Medium"
+                },
+                "medical_interpretation": "Significant age differences between patients with and without heart disease suggest age is an important risk factor."
+            },
+            "sex": {
+                "segments": [
+                    "1.0",
+                    "0.0"
+                ],
+                "segment_plot": "results/phase3/figures/age_by_sex.png",
+                "segment_stats": {
+                    "Male": {
+                        "count": 726,
+                        "mean": 53.78787878787879,
+                        "median": 55.0,
+                        "std": 9.392684852353568,
+                        "min": 28.0,
+                        "max": 77.0,
+                        "skewness": -0.2324898797866307,
+                        "kurtosis": -0.34404152159600887,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9893572351842945,
+                                "p_value": 4.061551277956189e-05,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.06824367140959164,
+                                "p_value": 0.00219933174336552,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.816791298831731,
+                                "critical_values": [
+                                    0.573,
+                                    0.652,
+                                    0.783,
+                                    0.913,
+                                    1.086
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Female": {
+                        "count": 194,
+                        "mean": 52.47422680412371,
+                        "median": 53.0,
+                        "std": 9.49621444457258,
+                        "min": 30.0,
+                        "max": 76.0,
+                        "skewness": -0.05888747090602424,
+                        "kurtosis": -0.4836806410281662,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9923610449526024,
+                                "p_value": 0.4054049972785381,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.05406219563508785,
+                                "p_value": 0.6026404054318744,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.39518601579925416,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": true
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 76551.0,
+                    "p_value": 0.06217785522486587,
+                    "significant": false
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.13953429811209678,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Analysis of age across different sex groups provides insights into population heterogeneity."
+            },
+            "age_group": {
+                "segments": [
+                    "60-69",
+                    "<40",
+                    "40-49",
+                    "50-59",
+                    "70+"
+                ],
+                "segment_plot": "results/phase3/figures/age_by_age_group.png",
+                "segment_stats": {
+                    "60-69": {
+                        "count": 197,
+                        "mean": 64.23350253807106,
+                        "median": 64.0,
+                        "std": 2.656584890772603,
+                        "min": 61.0,
+                        "max": 70.0,
+                        "skewness": 0.5970712466373511,
+                        "kurtosis": -0.7550250596503978,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9103872899691944,
+                                "p_value": 1.5040489458599613e-09,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.16652359432729646,
+                                "p_value": 3.0424641869438238e-05,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 5.4919146677615345,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "<40": {
+                        "count": 93,
+                        "mean": 36.473118279569896,
+                        "median": 37.0,
+                        "std": 3.005760403861741,
+                        "min": 28.0,
+                        "max": 40.0,
+                        "skewness": -0.910145817073477,
+                        "kurtosis": 0.14714160417318922,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9036686091992371,
+                                "p_value": 4.328594615927634e-06,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1683511908060079,
+                                "p_value": 0.00898230633963537,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.6680716963762876,
+                                "critical_values": [
+                                    0.554,
+                                    0.631,
+                                    0.757,
+                                    0.883,
+                                    1.05
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "40-49": {
+                        "count": 224,
+                        "mean": 45.674107142857146,
+                        "median": 46.0,
+                        "std": 2.9305946238699536,
+                        "min": 41.0,
+                        "max": 50.0,
+                        "skewness": -0.11228022230382896,
+                        "kurtosis": -1.2578235853962572,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9278258000910021,
+                                "p_value": 5.076107384347039e-09,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.13503447808784352,
+                                "p_value": 0.0005046942838897321,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 4.483814795237947,
+                                "critical_values": [
+                                    0.566,
+                                    0.645,
+                                    0.774,
+                                    0.902,
+                                    1.073
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "50-59": {
+                        "count": 382,
+                        "mean": 55.46596858638743,
+                        "median": 55.0,
+                        "std": 2.768901916966769,
+                        "min": 51.0,
+                        "max": 60.0,
+                        "skewness": 0.011635763744992901,
+                        "kurtosis": -1.1400307555827416,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9438696242517977,
+                                "p_value": 7.634147382855882e-11,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.10822320580910194,
+                                "p_value": 0.00023743611824185359,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 5.5960858092558965,
+                                "critical_values": [
+                                    0.57,
+                                    0.649,
+                                    0.779,
+                                    0.909,
+                                    1.081
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "70+": {
+                        "count": 24,
+                        "mean": 73.54166666666667,
+                        "median": 74.0,
+                        "std": 1.9332146390351255,
+                        "min": 71.0,
+                        "max": 77.0,
+                        "skewness": 0.15677360817560826,
+                        "kurtosis": -1.036971368917398,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9143048310597952,
+                                "p_value": 0.043772533334248825,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.17901402375484404,
+                                "p_value": 0.37990921165452796,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.7215554226237515,
+                                "critical_values": [
+                                    0.513,
+                                    0.584,
+                                    0.701,
+                                    0.817,
+                                    0.972
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Kruskal-Wallis H-test",
+                    "statistic": 830.8740487304883,
+                    "p_value": 1.5759486932580532e-178,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Eta-squared (H)",
+                    "value": 0.9036874849513533,
+                    "interpretation": "Large"
+                },
+                "medical_interpretation": "Age-related variations in age suggest the importance of age-stratified approaches to cardiac risk assessment."
+            }
+        },
+        "chol": {
+            "target_binary": {
+                "segments": [
+                    "0",
+                    "1"
+                ],
+                "segment_plot": "results/phase3/figures/chol_by_target_binary.png",
+                "segment_stats": {
+                    "No Disease": {
+                        "count": 411,
+                        "mean": 234.83211678832117,
+                        "median": 234.0,
+                        "std": 50.558753941750034,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": 0.16307629837921417,
+                        "kurtosis": 0.02680334089932268,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9824582999689871,
+                                "p_value": 6.963179835451096e-05,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.06994900887019118,
+                                "p_value": 0.03412636225492616,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 1.8340705395566488,
+                                "critical_values": [
+                                    0.571,
+                                    0.65,
+                                    0.78,
+                                    0.909,
+                                    1.082
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Disease": {
+                        "count": 509,
+                        "mean": 237.39882121807466,
+                        "median": 234.0,
+                        "std": 52.316618971938375,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": -0.1616779070347955,
+                        "kurtosis": 0.34030044804622195,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.945497606889421,
+                                "p_value": 9.85640282519301e-13,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.13103311307460158,
+                                "p_value": 4.4268347930691054e-08,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 10.888537266347157,
+                                "critical_values": [
+                                    0.572,
+                                    0.651,
+                                    0.781,
+                                    0.911,
+                                    1.084
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 98544.5,
+                    "p_value": 0.12973280106833693,
+                    "significant": false
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.04980127939115375,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Analysis of chol across different target_binary groups provides insights into population heterogeneity."
+            },
+            "sex": {
+                "segments": [
+                    "1.0",
+                    "0.0"
+                ],
+                "segment_plot": "results/phase3/figures/chol_by_sex.png",
+                "segment_stats": {
+                    "Male": {
+                        "count": 726,
+                        "mean": 232.46143250688706,
+                        "median": 234.0,
+                        "std": 50.82382580166026,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": -0.11970586133692042,
+                        "kurtosis": 0.30188660074714235,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9593817907618891,
+                                "p_value": 2.7282676763599897e-13,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.10499640637898477,
+                                "p_value": 2.0123241056891578e-07,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 10.815738837269919,
+                                "critical_values": [
+                                    0.573,
+                                    0.652,
+                                    0.783,
+                                    0.913,
+                                    1.086
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Female": {
+                        "count": 194,
+                        "mean": 250.43814432989691,
+                        "median": 240.5,
+                        "std": 51.79437011696598,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": 0.2741516454801129,
+                        "kurtosis": -0.5663057975107884,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9739698329663035,
+                                "p_value": 0.001122059391135044,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.08874876108889412,
+                                "p_value": 0.08855895837854277,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.4885355127682374,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 58943.0,
+                    "p_value": 0.00046375654822233695,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.35228142983779337,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Gender-based differences in chol may indicate the need for gender-specific risk assessment or treatment approaches."
+            },
+            "age_group": {
+                "segments": [
+                    "60-69",
+                    "<40",
+                    "40-49",
+                    "50-59",
+                    "70+"
+                ],
+                "segment_plot": "results/phase3/figures/chol_by_age_group.png",
+                "segment_stats": {
+                    "60-69": {
+                        "count": 197,
+                        "mean": 235.5,
+                        "median": 234.0,
+                        "std": 55.46747070240763,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": -0.26276392524333053,
+                        "kurtosis": 0.030779733954399813,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9491520075588686,
+                                "p_value": 1.8428649790165852e-06,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.12877919963860585,
+                                "p_value": 0.0026212892138778674,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 3.4730032131093083,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "<40": {
+                        "count": 93,
+                        "mean": 232.93010752688173,
+                        "median": 234.0,
+                        "std": 51.54512540725051,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": 0.263864644090102,
+                        "kurtosis": -0.12634610982827876,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9790758010427204,
+                                "p_value": 0.14129137807058192,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.11533102145166174,
+                                "p_value": 0.15569748871517308,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.6440382715213389,
+                                "critical_values": [
+                                    0.554,
+                                    0.631,
+                                    0.757,
+                                    0.883,
+                                    1.05
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": true
+                            }
+                        }
+                    },
+                    "40-49": {
+                        "count": 224,
+                        "mean": 237.04017857142858,
+                        "median": 234.0,
+                        "std": 45.67179848275721,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": 0.16318488726312336,
+                        "kurtosis": 0.43803737385343844,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9780344419762501,
+                                "p_value": 0.0014628732855544119,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.08534782233113303,
+                                "p_value": 0.07212955794984954,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.8433814615502797,
+                                "critical_values": [
+                                    0.566,
+                                    0.645,
+                                    0.774,
+                                    0.902,
+                                    1.073
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "50-59": {
+                        "count": 382,
+                        "mean": 237.22905759162305,
+                        "median": 234.0,
+                        "std": 53.102206889519735,
+                        "min": 124.5,
+                        "max": 352.5,
+                        "skewness": -0.004141464113989358,
+                        "kurtosis": 0.17015284555057875,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.960795790690717,
+                                "p_value": 1.4240619448056791e-08,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.12375227599568456,
+                                "p_value": 1.4763016435328539e-05,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 5.04013149968921,
+                                "critical_values": [
+                                    0.57,
+                                    0.649,
+                                    0.779,
+                                    0.909,
+                                    1.081
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "70+": {
+                        "count": 24,
+                        "mean": 232.39583333333334,
+                        "median": 234.0,
+                        "std": 47.0760206582342,
+                        "min": 124.5,
+                        "max": 310.0,
+                        "skewness": -0.1793817482650377,
+                        "kurtosis": 0.016119935813994513,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9449484984550788,
+                                "p_value": 0.21006572982132313,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.1685426798086881,
+                                "p_value": 0.4538297385539557,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.5662750423108207,
+                                "critical_values": [
+                                    0.513,
+                                    0.584,
+                                    0.701,
+                                    0.817,
+                                    0.972
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": true
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Kruskal-Wallis H-test",
+                    "statistic": 1.3523224987107443,
+                    "p_value": 0.8524377942650201,
+                    "significant": false
+                },
+                "effect_size": {
+                    "method": "Eta-squared (H)",
+                    "value": -0.0028936366134308805,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Analysis of chol across different age_group groups provides insights into population heterogeneity."
+            }
+        },
+        "thalach": {
+            "target_binary": {
+                "segments": [
+                    "0",
+                    "1"
+                ],
+                "segment_plot": "results/phase3/figures/thalach_by_target_binary.png",
+                "segment_stats": {
+                    "No Disease": {
+                        "count": 411,
+                        "mean": 148.37226277372264,
+                        "median": 150.0,
+                        "std": 23.10358666040154,
+                        "min": 69.0,
+                        "max": 202.0,
+                        "skewness": -0.46832312991177977,
+                        "kurtosis": -0.08072632247255385,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9806661848578324,
+                                "p_value": 2.6586402924675296e-05,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.06883158539276202,
+                                "p_value": 0.03880283972682663,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.0363904333200367,
+                                "critical_values": [
+                                    0.571,
+                                    0.65,
+                                    0.78,
+                                    0.909,
+                                    1.082
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Disease": {
+                        "count": 509,
+                        "mean": 129.08644400785855,
+                        "median": 130.0,
+                        "std": 23.32195902076514,
+                        "min": 66.0,
+                        "max": 195.0,
+                        "skewness": -0.1502110391672314,
+                        "kurtosis": -0.2321735175576083,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9942198556846302,
+                                "p_value": 0.050669943601688305,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.08693487638052655,
+                                "p_value": 0.0008517253453826955,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 1.0133253724764018,
+                                "critical_values": [
+                                    0.572,
+                                    0.651,
+                                    0.781,
+                                    0.911,
+                                    1.084
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 151378.0,
+                    "p_value": 1.5651001692076925e-31,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.830401822248986,
+                    "interpretation": "Large"
+                },
+                "medical_interpretation": "Significant differences in maximum heart rate between patients with and without heart disease may indicate functional cardiac capacity disparities."
+            },
+            "sex": {
+                "segments": [
+                    "1.0",
+                    "0.0"
+                ],
+                "segment_plot": "results/phase3/figures/thalach_by_sex.png",
+                "segment_stats": {
+                    "Male": {
+                        "count": 726,
+                        "mean": 135.4366391184573,
+                        "median": 140.0,
+                        "std": 25.40460412790941,
+                        "min": 66.0,
+                        "max": 202.0,
+                        "skewness": -0.14659510236465575,
+                        "kurtosis": -0.31673683667591224,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9929305275782946,
+                                "p_value": 0.0016351722623381133,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.07959049715385413,
+                                "p_value": 0.00019007618165767053,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 1.4621905807402982,
+                                "critical_values": [
+                                    0.573,
+                                    0.652,
+                                    0.783,
+                                    0.913,
+                                    1.086
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Female": {
+                        "count": 194,
+                        "mean": 146.18041237113403,
+                        "median": 150.0,
+                        "std": 22.086814762603645,
+                        "min": 90.0,
+                        "max": 192.0,
+                        "skewness": -0.4231206500545727,
+                        "kurtosis": -0.4357054382400998,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9767418002573874,
+                                "p_value": 0.0025774383967508245,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.07913394164296345,
+                                "p_value": 0.16686530420452783,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.3207885446925047,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 52368.0,
+                    "p_value": 3.906906643714058e-08,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.4341965256715319,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Gender-based differences in thalach may indicate the need for gender-specific risk assessment or treatment approaches."
+            },
+            "age_group": {
+                "segments": [
+                    "60-69",
+                    "<40",
+                    "40-49",
+                    "50-59",
+                    "70+"
+                ],
+                "segment_plot": "results/phase3/figures/thalach_by_age_group.png",
+                "segment_stats": {
+                    "60-69": {
+                        "count": 197,
+                        "mean": 127.79695431472081,
+                        "median": 132.0,
+                        "std": 23.80231919035914,
+                        "min": 67.0,
+                        "max": 179.0,
+                        "skewness": -0.47830246699605106,
+                        "kurtosis": -0.3352639731454432,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9694266490199206,
+                                "p_value": 0.0002713096888402669,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.13291847167391913,
+                                "p_value": 0.0017010828989876433,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.267034683514055,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "<40": {
+                        "count": 93,
+                        "mean": 156.11827956989248,
+                        "median": 158.0,
+                        "std": 23.756394774041823,
+                        "min": 80.0,
+                        "max": 202.0,
+                        "skewness": -0.610204613608808,
+                        "kurtosis": 0.09796952898842459,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9634226256822845,
+                                "p_value": 0.010482495559771278,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.09811464468228515,
+                                "p_value": 0.3115731933701169,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.948490680892192,
+                                "critical_values": [
+                                    0.554,
+                                    0.631,
+                                    0.757,
+                                    0.883,
+                                    1.05
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "40-49": {
+                        "count": 224,
+                        "mean": 144.85267857142858,
+                        "median": 144.5,
+                        "std": 23.038682463501853,
+                        "min": 90.0,
+                        "max": 194.0,
+                        "skewness": -0.1769982853787637,
+                        "kurtosis": -0.7955277580050031,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9785676595247159,
+                                "p_value": 0.001758214578080126,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.06837321801538931,
+                                "p_value": 0.23491713162418582,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.2825817047093437,
+                                "critical_values": [
+                                    0.566,
+                                    0.645,
+                                    0.774,
+                                    0.902,
+                                    1.073
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "50-59": {
+                        "count": 382,
+                        "mean": 134.9869109947644,
+                        "median": 140.0,
+                        "std": 24.153432047471995,
+                        "min": 66.0,
+                        "max": 195.0,
+                        "skewness": -0.24418445037522926,
+                        "kurtosis": -0.3824713177096224,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9887045675702698,
+                                "p_value": 0.004717262245688209,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.10325922329716719,
+                                "p_value": 0.0005331682043381086,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 1.4923025604022087,
+                                "critical_values": [
+                                    0.57,
+                                    0.649,
+                                    0.779,
+                                    0.909,
+                                    1.081
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "70+": {
+                        "count": 24,
+                        "mean": 124.125,
+                        "median": 121.0,
+                        "std": 16.89947902464297,
+                        "min": 94.0,
+                        "max": 162.0,
+                        "skewness": 0.6651542776470182,
+                        "kurtosis": 0.13221050250419975,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9418238533078129,
+                                "p_value": 0.17911133726714434,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.116578760280168,
+                                "p_value": 0.8630092289836857,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.5262177539306698,
+                                "critical_values": [
+                                    0.513,
+                                    0.584,
+                                    0.701,
+                                    0.817,
+                                    0.972
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": true
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Kruskal-Wallis H-test",
+                    "statistic": 104.12201244671925,
+                    "p_value": 1.30307003002752e-21,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Eta-squared (H)",
+                    "value": 0.10942296442264399,
+                    "interpretation": "Medium"
+                },
+                "medical_interpretation": "Age-related variations in thalach suggest the importance of age-stratified approaches to cardiac risk assessment."
+            }
+        },
+        "oldpeak": {
+            "target_binary": {
+                "segments": [
+                    "0",
+                    "1"
+                ],
+                "segment_plot": "results/phase3/figures/oldpeak_by_target_binary.png",
+                "segment_stats": {
+                    "No Disease": {
+                        "count": 411,
+                        "mean": 0.4212895377128954,
+                        "median": 0.0,
+                        "std": 0.6916861979620883,
+                        "min": -1.1,
+                        "max": 3.75,
+                        "skewness": 1.7620634171046432,
+                        "kurtosis": 3.11564794660839,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.7034102224113911,
+                                "p_value": 2.636585086534531e-26,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.3324152808730481,
+                                "p_value": 5.575331821042856e-41,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 50.935820335177425,
+                                "critical_values": [
+                                    0.571,
+                                    0.65,
+                                    0.78,
+                                    0.909,
+                                    1.082
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Disease": {
+                        "count": 509,
+                        "mean": 1.1847740667976423,
+                        "median": 1.0,
+                        "std": 1.1157246674244383,
+                        "min": -2.25,
+                        "max": 3.75,
+                        "skewness": 0.40272949533224,
+                        "kurtosis": -0.4039322225056572,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9388690119177905,
+                                "p_value": 1.3099045909316874e-13,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.12622463409108314,
+                                "p_value": 1.5784879871401e-07,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 10.778997905507367,
+                                "critical_values": [
+                                    0.572,
+                                    0.651,
+                                    0.781,
+                                    0.911,
+                                    1.084
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 58979.0,
+                    "p_value": 4.484640774173373e-32,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.8036481783497947,
+                    "interpretation": "Large"
+                },
+                "medical_interpretation": "Significant differences in ST depression between groups highlight its value as a diagnostic indicator."
+            },
+            "sex": {
+                "segments": [
+                    "1.0",
+                    "0.0"
+                ],
+                "segment_plot": "results/phase3/figures/oldpeak_by_sex.png",
+                "segment_stats": {
+                    "Male": {
+                        "count": 726,
+                        "mean": 0.8948347107438016,
+                        "median": 0.5,
+                        "std": 1.0507751688160505,
+                        "min": -2.25,
+                        "max": 3.75,
+                        "skewness": 0.8073368029412836,
+                        "kurtosis": 0.008741399247427672,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.8744226304387277,
+                                "p_value": 1.0165460896280861e-23,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1927506041088855,
+                                "p_value": 4.228163551734527e-24,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 36.062549339129646,
+                                "critical_values": [
+                                    0.573,
+                                    0.652,
+                                    0.783,
+                                    0.913,
+                                    1.086
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Female": {
+                        "count": 194,
+                        "mean": 0.652319587628866,
+                        "median": 0.0,
+                        "std": 0.8862404034882175,
+                        "min": 0.0,
+                        "max": 3.75,
+                        "skewness": 1.472021341622681,
+                        "kurtosis": 1.8784059298962088,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.7585667859956258,
+                                "p_value": 1.5073681296390925e-16,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.28003900291270967,
+                                "p_value": 6.008781801409441e-14,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 16.925980201236513,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 80283.5,
+                    "p_value": 0.0018997499026286646,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.23813516958822528,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Gender-based differences in oldpeak may indicate the need for gender-specific risk assessment or treatment approaches."
+            },
+            "age_group": {
+                "segments": [
+                    "60-69",
+                    "<40",
+                    "40-49",
+                    "50-59",
+                    "70+"
+                ],
+                "segment_plot": "results/phase3/figures/oldpeak_by_age_group.png",
+                "segment_stats": {
+                    "60-69": {
+                        "count": 197,
+                        "mean": 1.1624365482233503,
+                        "median": 1.0,
+                        "std": 1.1027494175201753,
+                        "min": -0.9,
+                        "max": 3.75,
+                        "skewness": 0.6409187898257418,
+                        "kurtosis": -0.4312513200402557,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9243362763891143,
+                                "p_value": 1.4938745711340725e-08,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.15796623596018328,
+                                "p_value": 9.247695407404047e-05,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 4.838107085922559,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "<40": {
+                        "count": 93,
+                        "mean": 0.43709677419354837,
+                        "median": 0.0,
+                        "std": 0.8615236510987523,
+                        "min": -1.1,
+                        "max": 3.75,
+                        "skewness": 1.9663493436461081,
+                        "kurtosis": 3.6845520726050083,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.645242778842142,
+                                "p_value": 1.1620424036926472e-13,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.3939351122346195,
+                                "p_value": 1.6077798127451663e-13,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 14.680293368146977,
+                                "critical_values": [
+                                    0.554,
+                                    0.631,
+                                    0.757,
+                                    0.883,
+                                    1.05
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "40-49": {
+                        "count": 224,
+                        "mean": 0.6026785714285714,
+                        "median": 0.0,
+                        "std": 0.9256034096766956,
+                        "min": -2.25,
+                        "max": 3.75,
+                        "skewness": 1.1101876024619983,
+                        "kurtosis": 1.0975756251701076,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.7730269298263731,
+                                "p_value": 2.6596545124695792e-17,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.3054857912456621,
+                                "p_value": 4.736322388673187e-19,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 22.631551958572402,
+                                "critical_values": [
+                                    0.566,
+                                    0.645,
+                                    0.774,
+                                    0.902,
+                                    1.073
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "50-59": {
+                        "count": 382,
+                        "mean": 0.9034031413612567,
+                        "median": 0.5,
+                        "std": 1.0028183066790206,
+                        "min": -2.0,
+                        "max": 3.75,
+                        "skewness": 0.7958440731875298,
+                        "kurtosis": 0.04116385775542852,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.8843207409768145,
+                                "p_value": 2.337038463001431e-16,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1751224452777016,
+                                "p_value": 1.0226798380307249e-10,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 16.405087060212452,
+                                "critical_values": [
+                                    0.57,
+                                    0.649,
+                                    0.779,
+                                    0.909,
+                                    1.081
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "70+": {
+                        "count": 24,
+                        "mean": 1.1020833333333333,
+                        "median": 0.75,
+                        "std": 1.1206053455966156,
+                        "min": 0.0,
+                        "max": 3.75,
+                        "skewness": 0.9794473498043627,
+                        "kurtosis": 0.07713457866421125,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.865072201474867,
+                                "p_value": 0.004218429546116152,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.2084423119668825,
+                                "p_value": 0.21559167309331473,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.0362759790128244,
+                                "critical_values": [
+                                    0.513,
+                                    0.584,
+                                    0.701,
+                                    0.817,
+                                    0.972
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Kruskal-Wallis H-test",
+                    "statistic": 65.01319897763028,
+                    "p_value": 2.5567812398374723e-13,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Eta-squared (H)",
+                    "value": 0.06668109177883091,
+                    "interpretation": "Medium"
+                },
+                "medical_interpretation": "Age-related variations in oldpeak suggest the importance of age-stratified approaches to cardiac risk assessment."
+            }
+        },
+        "trestbps": {
+            "target_binary": {
+                "segments": [
+                    "0",
+                    "1"
+                ],
+                "segment_plot": "results/phase3/figures/trestbps_by_target_binary.png",
+                "segment_stats": {
+                    "No Disease": {
+                        "count": 411,
+                        "mean": 129.72262773722628,
+                        "median": 130.0,
+                        "std": 15.756870709045314,
+                        "min": 90.0,
+                        "max": 170.0,
+                        "skewness": 0.40694142636975505,
+                        "kurtosis": 0.09276127207594431,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.968239358067035,
+                                "p_value": 8.76412349042951e-08,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.14017106749179853,
+                                "p_value": 1.6556753913218895e-07,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 4.974490624508917,
+                                "critical_values": [
+                                    0.571,
+                                    0.65,
+                                    0.78,
+                                    0.909,
+                                    1.082
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Disease": {
+                        "count": 509,
+                        "mean": 133.3418467583497,
+                        "median": 130.0,
+                        "std": 17.65719715989488,
+                        "min": 90.0,
+                        "max": 170.0,
+                        "skewness": 0.2458878497673865,
+                        "kurtosis": -0.3848101979011025,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9738943302816003,
+                                "p_value": 6.985426332589812e-08,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1271923183056234,
+                                "p_value": 1.2268836953926176e-07,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 4.381872408858499,
+                                "critical_values": [
+                                    0.572,
+                                    0.651,
+                                    0.781,
+                                    0.911,
+                                    1.084
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 92111.5,
+                    "p_value": 0.0017183940582242779,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.21498187206895886,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Significant differences in trestbps between patients with and without heart disease suggest its potential diagnostic or prognostic value."
+            },
+            "sex": {
+                "segments": [
+                    "1.0",
+                    "0.0"
+                ],
+                "segment_plot": "results/phase3/figures/trestbps_by_sex.png",
+                "segment_stats": {
+                    "Male": {
+                        "count": 726,
+                        "mean": 131.80027548209367,
+                        "median": 130.0,
+                        "std": 16.697802454830896,
+                        "min": 90.0,
+                        "max": 170.0,
+                        "skewness": 0.3205491150600702,
+                        "kurtosis": -0.1575779819065044,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9727826097413185,
+                                "p_value": 2.2569752329587664e-10,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.14075444791170405,
+                                "p_value": 5.188726705932148e-13,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 7.318515817796879,
+                                "critical_values": [
+                                    0.573,
+                                    0.652,
+                                    0.783,
+                                    0.913,
+                                    1.086
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "Female": {
+                        "count": 194,
+                        "mean": 131.44329896907217,
+                        "median": 130.0,
+                        "std": 17.77724520536018,
+                        "min": 94.0,
+                        "max": 170.0,
+                        "skewness": 0.3875946718111908,
+                        "kurtosis": -0.33245809644599866,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9653674553660543,
+                                "p_value": 0.00010288206456763891,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1149115304751121,
+                                "p_value": 0.010928619330135262,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.126398215347251,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Mann-Whitney U test",
+                    "statistic": 71939.0,
+                    "p_value": 0.6426472998087753,
+                    "significant": false
+                },
+                "effect_size": {
+                    "method": "Cohen's d",
+                    "value": 0.021084869550788077,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Analysis of trestbps across different sex groups provides insights into population heterogeneity."
+            },
+            "age_group": {
+                "segments": [
+                    "60-69",
+                    "<40",
+                    "40-49",
+                    "50-59",
+                    "70+"
+                ],
+                "segment_plot": "results/phase3/figures/trestbps_by_age_group.png",
+                "segment_stats": {
+                    "60-69": {
+                        "count": 197,
+                        "mean": 136.06091370558374,
+                        "median": 134.0,
+                        "std": 16.787578777229875,
+                        "min": 95.0,
+                        "max": 170.0,
+                        "skewness": 0.11221424875105486,
+                        "kurtosis": -0.422003190669646,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9764711499481769,
+                                "p_value": 0.0021406972652609504,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.12861698180069536,
+                                "p_value": 0.0026653384315350405,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 1.5891808772948934,
+                                "critical_values": [
+                                    0.565,
+                                    0.643,
+                                    0.772,
+                                    0.9,
+                                    1.071
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "<40": {
+                        "count": 93,
+                        "mean": 124.47311827956989,
+                        "median": 120.0,
+                        "std": 16.066838247072663,
+                        "min": 92.0,
+                        "max": 170.0,
+                        "skewness": 0.4057618717236112,
+                        "kurtosis": 0.24922952234143336,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9691575266843037,
+                                "p_value": 0.02669171960898506,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1371106946793249,
+                                "p_value": 0.05493006391572053,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 1.0405446531667764,
+                                "critical_values": [
+                                    0.554,
+                                    0.631,
+                                    0.757,
+                                    0.883,
+                                    1.05
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "40-49": {
+                        "count": 224,
+                        "mean": 127.94642857142857,
+                        "median": 129.5,
+                        "std": 15.555968263746163,
+                        "min": 100.0,
+                        "max": 170.0,
+                        "skewness": 0.43723619458264,
+                        "kurtosis": -0.3052096984023627,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9658250857036738,
+                                "p_value": 3.190594386932477e-05,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.1331648221182103,
+                                "p_value": 0.0006336264014711067,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 2.4693632081247756,
+                                "critical_values": [
+                                    0.566,
+                                    0.645,
+                                    0.774,
+                                    0.902,
+                                    1.073
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "50-59": {
+                        "count": 382,
+                        "mean": 133.10471204188482,
+                        "median": 130.0,
+                        "std": 16.913537381850556,
+                        "min": 90.0,
+                        "max": 170.0,
+                        "skewness": 0.386538051030982,
+                        "kurtosis": 0.018533834443683173,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9583682374707954,
+                                "p_value": 6.234894664350035e-09,
+                                "normal": false
+                            },
+                            "ks": {
+                                "statistic": 0.15668620937121736,
+                                "p_value": 1.1727251570500604e-08,
+                                "normal": false
+                            },
+                            "anderson": {
+                                "statistic": 6.249660469907099,
+                                "critical_values": [
+                                    0.57,
+                                    0.649,
+                                    0.779,
+                                    0.909,
+                                    1.081
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": false
+                            }
+                        }
+                    },
+                    "70+": {
+                        "count": 24,
+                        "mean": 137.54166666666666,
+                        "median": 133.0,
+                        "std": 18.51199180476564,
+                        "min": 104.0,
+                        "max": 170.0,
+                        "skewness": 0.0409063342956629,
+                        "kurtosis": -1.0557802163268017,
+                        "normality_tests": {
+                            "shapiro": {
+                                "statistic": 0.9484986372746089,
+                                "p_value": 0.2513416225201257,
+                                "normal": true
+                            },
+                            "ks": {
+                                "statistic": 0.16135197685800284,
+                                "p_value": 0.5086596690930778,
+                                "normal": true
+                            },
+                            "anderson": {
+                                "statistic": 0.5065761449521347,
+                                "critical_values": [
+                                    0.513,
+                                    0.584,
+                                    0.701,
+                                    0.817,
+                                    0.972
+                                ],
+                                "significance_levels": [
+                                    15.0,
+                                    10.0,
+                                    5.0,
+                                    2.5,
+                                    1.0
+                                ],
+                                "normal": true
+                            }
+                        }
+                    }
+                },
+                "difference_test": {
+                    "test": "Kruskal-Wallis H-test",
+                    "statistic": 47.741300259250124,
+                    "p_value": 1.068551620628e-09,
+                    "significant": true
+                },
+                "effect_size": {
+                    "method": "Eta-squared (H)",
+                    "value": 0.047804699736885385,
+                    "interpretation": "Small"
+                },
+                "medical_interpretation": "Age-related variations in trestbps suggest the importance of age-stratified approaches to cardiac risk assessment."
+            }
+        }
+    },
+    "key_findings": [
+        "age: Approximately normal distribution",
+        "chol: Approximately normal distribution",
+        "thalach: Approximately normal distribution",
+        "oldpeak: Moderately non-normal distribution",
+        "trestbps: Approximately normal distribution",
+        "age varies significantly across Disease Status groups (Mann-Whitney U test, p=0.0000)",
+        "age varies significantly across Age Group groups (Kruskal-Wallis H-test, p=0.0000)",
+        "chol varies significantly across Gender groups (Mann-Whitney U test, p=0.0005)",
+        "thalach varies significantly across Disease Status groups (Mann-Whitney U test, p=0.0000)",
+        "thalach varies significantly across Gender groups (Mann-Whitney U test, p=0.0000)",
+        "thalach varies significantly across Age Group groups (Kruskal-Wallis H-test, p=0.0000)",
+        "oldpeak varies significantly across Disease Status groups (Mann-Whitney U test, p=0.0000)",
+        "oldpeak varies significantly across Gender groups (Mann-Whitney U test, p=0.0019)",
+        "oldpeak varies significantly across Age Group groups (Kruskal-Wallis H-test, p=0.0000)",
+        "trestbps varies significantly across Disease Status groups (Mann-Whitney U test, p=0.0017)",
+        "trestbps varies significantly across Age Group groups (Kruskal-Wallis H-test, p=0.0000)"
+    ],
+    "clinical_interpretations": [
+        "Age distribution appears balanced, suggesting a representative sample across age groups.",
+        "Cholesterol distribution is relatively symmetric, suggesting a well-distributed range of cholesterol levels.",
+        "Maximum heart rate distribution shows expected pattern for a diverse cardiac patient population.",
+        "ST depression distribution is right-skewed, with most patients showing smaller depressions and fewer patients with severe ST depression.",
+        "Distribution of trestbps provides insights into the spread and central tendency of this parameter in the patient population.",
+        "Significant age differences between patients with and without heart disease suggest age is an important risk factor.",
+        "Age-related variations in age suggest the importance of age-stratified approaches to cardiac risk assessment.",
+        "Gender-based differences in chol may indicate the need for gender-specific risk assessment or treatment approaches.",
+        "Significant differences in maximum heart rate between patients with and without heart disease may indicate functional cardiac capacity disparities.",
+        "Gender-based differences in thalach may indicate the need for gender-specific risk assessment or treatment approaches.",
+        "Age-related variations in thalach suggest the importance of age-stratified approaches to cardiac risk assessment.",
+        "Significant differences in ST depression between groups highlight its value as a diagnostic indicator.",
+        "Gender-based differences in oldpeak may indicate the need for gender-specific risk assessment or treatment approaches.",
+        "Age-related variations in oldpeak suggest the importance of age-stratified approaches to cardiac risk assessment.",
+        "Significant differences in trestbps between patients with and without heart disease suggest its potential diagnostic or prognostic value.",
+        "Age-related variations in trestbps suggest the importance of age-stratified approaches to cardiac risk assessment."
+    ],
+    "timestamp": "2025-03-30 15:42:58"
+}
